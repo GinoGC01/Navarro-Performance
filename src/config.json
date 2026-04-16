@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "brand": "KINETIC VELOCITY",
+    "defaultLang": "en"
+  },
+  "images": {
+    "hero": "/images/hero.png",
+    "computer": "/images/computer.png",
+    "blueFix": "/images/blueFix.png",
+    "blackCar": "/images/blackCar.png",
+    "bm": "/images/bm.png",
+    "forcedInduction": "/images/forcedInduction.png",
+    "after": "/images/after.png"
+  },
+  "contact": {
+    "phone": "(754) 457-1445",
+    "phoneFull": "7544571445",
+    "email": "navarroperformance1@gmail.com",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.332304671404!2d-80.1449525!3d26.1533038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA5JzExLjkiTiA4MMKwMDgnNDEuOCJX!5e0!3m2!1sen!2sus!4v1713292400000!5m2!1sen!2sus",
+    "mapDirections": "https://maps.google.com"
+  },
+  "schedule": [
+    { "day": { "en": "Monday", "es": "Lunes" }, "hours": "9:00am - 5:00pm", "closed": false },
+    { "day": { "en": "Tuesday", "es": "Martes" }, "hours": "9:00am - 5:00pm", "closed": false },
+    { "day": { "en": "Wednesday", "es": "Miércoles" }, "hours": "9:00am - 5:00pm", "closed": false },
+    { "day": { "en": "Thursday", "es": "Jueves" }, "hours": "9:00am - 5:00pm", "closed": false },
+    { "day": { "en": "Friday", "es": "Viernes" }, "hours": "9:00am - 5:00pm", "closed": false },
+    { "day": { "en": "Saturday", "es": "Sábado" }, "hours": "9:00am - 5:00pm", "closed": false },
+    { "day": { "en": "Sunday", "es": "Domingo" }, "hours": { "en": "Closed", "es": "Cerrado" }, "closed": true }
+  ],
+  "header": {
+    "en": {
+      "tunning": "TUNNING",
+      "bookAppointment": "BOOK APPOINTMENT"
+    },
+    "es": {
+      "tunning": "TUNNING",
+      "bookAppointment": "RESERVAR TURNO"
+    }
+  },
+  "footer": {
+    "en": {
+      "tagline": "ENGINEERING ADRENALINE SINCE 2009",
+      "copyright": "©2024 KINETIC VELOCITY PERFORMANCE. ALL RIGHTS RESERVED. NO LIMITS.",
+      "privacyPolicy": "PRIVACY POLICY",
+      "termsOfService": "TERMS OF SERVICE",
+      "shipping": "SHIPPING",
+      "refunds": "REFUNDS"
+    },
+    "es": {
+      "tagline": "INGENIERÍA DE ADRENALINA DESDE 2009",
+      "copyright": "©2024 KINETIC VELOCITY PERFORMANCE. TODOS LOS DERECHOS RESERVADOS. SIN LÍMITES.",
+      "privacyPolicy": "POLÍTICA DE PRIVACIDAD",
+      "termsOfService": "TÉRMINOS DE SERVICIO",
+      "shipping": "ENVÍOS",
+      "refunds": "REEMBOLSOS"
+    }
+  },
+  "home": {
+    "en": {
+      "title": "Tunning | Navarro Performance",
+      "hero": {
+        "badge": "DOMINATE THE ASPHALT",
+        "heading": "BUILT FOR <span class=\"text-primary\">SPEED.</span><br/>ENGINEERED FOR <span class=\"text-primary\">POWER.</span>",
+        "description": "We don't just tune cars; we rewrite their DNA. Experience the raw mechanical aggression of Kinetic Velocity.",
+        "ctaPrimary": "GET TUNED NOW",
+        "ctaSecondary": "VIEW BUILDS"
+      },
+      "stats": [
+        { "value": "50k+", "label": "HP ADDED TOTAL" },
+        { "value": "15yrs", "label": "ENGINEERING XP" },
+        { "value": "8.4s", "label": "QUARTER MILE RECORD" },
+        { "value": "100%", "label": "TRACK PROVEN" }
+      ],
+      "services": {
+        "heading": "<span class=\"text-primary\">ELITE</span> SERVICES",
+        "description": "Our workshop is equipped with the latest diagnostic and performance hardware to ensure every build meets absolute mechanical superiority.",
+        "workshopLabel": "MECHANICAL SUPERIORITY",
+        "cards": [
+          {
+            "badge": "POPULAR UPGRADE",
+            "title": "ECU STAGE 1-3 TUNING",
+            "description": "Unlock hidden potential. Custom maps for fuel, ignition, and boost control using pro-grade diagnostic tools.",
+            "price": "STARTING AT $899",
+            "cta": "LEARN MORE"
+          },
+          {
+            "icon": "speed",
+            "title": "1/4 MILE PREP",
+            "description": "Complete drag strip optimization including suspension tuning and tire packages.",
+            "price": "$2,499 FLAT RATE",
+            "cta": "CONFIGURE BUILD"
+          },
+          {
+            "icon": "precision_manufacturing",
+            "title": "DYNO TESTING",
+            "description": "Precise measurement on our AWD-linked chassis dynamometer. Track-ready accuracy.",
+            "price": "$150 / THREE PULLS",
+            "cta": "BOOK SESSION"
+          },
+          {
+            "title": "FORCED INDUCTION",
+            "description": "Complete turbo and supercharger installations with structural reinforcement.",
+            "price": "STARTING AT $5,500",
+            "cta": "VIEW PACKAGES"
+          }
+        ]
+      },
+      "results": {
+        "stockLabel": "STOCK",
+        "before": "BEFORE",
+        "afterValue": "750HP+",
+        "after": "AFTER"
+      },
+      "booking": {
+        "heading": "RESERVE YOUR<br/><span class=\"text-primary\">DYNO SLOT.</span>",
+        "description": "Our calendar fills up weeks in advance. Don't wait to unlock the true power of your machine. Instant confirmation for all stage-1 tuning packages.",
+        "nextAvailableLabel": "NEXT AVAILABLE:",
+        "nextAvailableValue": "TOMORROW, 09:00 AM",
+        "locationLabel": "LOCATION:",
+        "locationValue": "HOUSTON HQ, TX",
+        "selectService": "SELECT SERVICE",
+        "serviceOptions": ["STAGE 1 ECU REMAP", "FULL DYNO SESSION", "HARDWARE INSTALLATION"],
+        "fullName": "FULL NAME",
+        "fullNamePlaceholder": "JOHN DOE",
+        "vehicleVin": "VEHICLE VIN",
+        "vehicleVinPlaceholder": "XXXX-XXXX-XXXX",
+        "submitButton": "BOOK YOUR SLOT NOW"
+      },
+      "testimonials": {
+        "heading": "THE STREET SPEAKS",
+        "items": [
+          {
+            "quote": "\"Kinetic Velocity took my Supra from a weekend cruiser to a terrifying monster. 200HP gain with stock internals. Absolutely lethal.\"",
+            "initials": "M.S.",
+            "name": "MIKE SANCHEZ",
+            "vehicle": "2021 TOYOTA SUPRA MKV"
+          },
+          {
+            "quote": "\"The only shop I trust with my 1/4 mile builds. They understand the engineering, not just the software. Constant communication.\"",
+            "initials": "R.D.",
+            "name": "RAY DALTON",
+            "vehicle": "1969 CHEVY CAMARO"
+          },
+          {
+            "quote": "\"Professional, fast, and aggressive. The throttle response after their Stage 2 tune is night and day. Best money I've spent.\"",
+            "initials": "A.L.",
+            "name": "ALEX LEI",
+            "vehicle": "2023 BMW M4 CSL"
+          }
+        ]
+      }
+    },
+    "es": {
+      "title": "Tunning | Navarro Performance",
+      "hero": {
+        "badge": "DOMINÁ EL ASFALTO",
+        "heading": "HECHO PARA <span class=\"text-primary\">VELOCIDAD.</span><br/>DISEÑADO PARA <span class=\"text-primary\">POTENCIA.</span>",
+        "description": "No solo tuneamos autos; reescribimos su ADN. Experimentá la agresión mecánica pura de Kinetic Velocity.",
+        "ctaPrimary": "TUNEÁ AHORA",
+        "ctaSecondary": "VER BUILDS"
+      },
+      "stats": [
+        { "value": "50k+", "label": "HP AÑADIDOS EN TOTAL" },
+        { "value": "15 años", "label": "EXPERIENCIA EN INGENIERÍA" },
+        { "value": "8.4s", "label": "RÉCORD 1/4 DE MILLA" },
+        { "value": "100%", "label": "PROBADO EN PISTA" }
+      ],
+      "services": {
+        "heading": "SERVICIOS <span class=\"text-primary\">ÉLITE</span>",
+        "description": "Nuestro taller está equipado con el hardware de diagnóstico y rendimiento más avanzado para asegurar que cada build alcance la superioridad mecánica absoluta.",
+        "workshopLabel": "SUPERIORIDAD MECÁNICA",
+        "cards": [
+          {
+            "badge": "UPGRADE POPULAR",
+            "title": "ECU STAGE 1-3 TUNING",
+            "description": "Desbloqueá el potencial oculto. Mapas personalizados de combustible, encendido y control de boost con herramientas de diagnóstico profesional.",
+            "price": "DESDE $899",
+            "cta": "SABER MÁS"
+          },
+          {
+            "icon": "speed",
+            "title": "PREP 1/4 DE MILLA",
+            "description": "Optimización completa para drag strip incluyendo ajuste de suspensión y paquetes de neumáticos.",
+            "price": "$2,499 TARIFA FIJA",
+            "cta": "CONFIGURAR BUILD"
+          },
+          {
+            "icon": "precision_manufacturing",
+            "title": "PRUEBA EN DYNO",
+            "description": "Medición precisa en nuestro dinamómetro de chasis AWD. Precisión lista para pista.",
+            "price": "$150 / TRES PASADAS",
+            "cta": "RESERVAR SESIÓN"
+          },
+          {
+            "title": "INDUCCIÓN FORZADA",
+            "description": "Instalaciones completas de turbo y supercargador con refuerzo estructural.",
+            "price": "DESDE $5,500",
+            "cta": "VER PAQUETES"
+          }
+        ]
+      },
+      "results": {
+        "stockLabel": "STOCK",
+        "before": "ANTES",
+        "afterValue": "750HP+",
+        "after": "DESPUÉS"
+      },
+      "booking": {
+        "heading": "RESERVÁ TU<br/><span class=\"text-primary\">TURNO EN DYNO.</span>",
+        "description": "Nuestro calendario se llena semanas antes. No esperes para desbloquear el verdadero poder de tu máquina. Confirmación instantánea para todos los paquetes stage-1.",
+        "nextAvailableLabel": "PRÓXIMO DISPONIBLE:",
+        "nextAvailableValue": "MAÑANA, 09:00 AM",
+        "locationLabel": "UBICACIÓN:",
+        "locationValue": "HOUSTON HQ, TX",
+        "selectService": "SELECCIONAR SERVICIO",
+        "serviceOptions": ["STAGE 1 ECU REMAP", "SESIÓN COMPLETA DYNO", "INSTALACIÓN DE HARDWARE"],
+        "fullName": "NOMBRE COMPLETO",
+        "fullNamePlaceholder": "JUAN PÉREZ",
+        "vehicleVin": "VIN DEL VEHÍCULO",
+        "vehicleVinPlaceholder": "XXXX-XXXX-XXXX",
+        "submitButton": "RESERVÁ TU TURNO AHORA"
+      },
+      "testimonials": {
+        "heading": "LA CALLE HABLA",
+        "items": [
+          {
+            "quote": "\"Kinetic Velocity transformó mi Supra de un crucero de fin de semana a un monstruo aterrador. 200HP de ganancia con internos stock. Absolutamente letal.\"",
+            "initials": "M.S.",
+            "name": "MIKE SANCHEZ",
+            "vehicle": "2021 TOYOTA SUPRA MKV"
+          },
+          {
+            "quote": "\"El único taller en el que confío para mis builds de 1/4 de milla. Entienden la ingeniería, no solo el software. Comunicación constante.\"",
+            "initials": "R.D.",
+            "name": "RAY DALTON",
+            "vehicle": "1969 CHEVY CAMARO"
+          },
+          {
+            "quote": "\"Profesionales, rápidos y agresivos. La respuesta del acelerador después de su tune Stage 2 es otra cosa. El mejor dinero que gasté.\"",
+            "initials": "A.L.",
+            "name": "ALEX LEI",
+            "vehicle": "2023 BMW M4 CSL"
+          }
+        ]
+      }
+    }
+  },
+  "tunning": {
+    "en": {
+      "title": "Home | Navarro Performance",
+      "hero": {
+        "badge": "Unleash Raw Power",
+        "heading": "ENGINEERED TO <br/><span class=\"text-primary text-glow\">DOMINATE</span>",
+        "description": "Navarro Performance isn't just about tuning; it's about surgical precision. We recalibrate your vehicle's DNA for maximum torque, efficiency, and relentless asphalt-tearing aggression."
+      },
+      "catalog": {
+        "heading": "TUNING PROTOCOLS",
+        "subtitle": "// 8 SQUADRON-GRADE SERVICES AVAILABLE",
+        "services": [
+          {
+            "number": "01",
+            "badge": "READY TO SHIP",
+            "badgeType": "primary",
+            "title": "Stage 1 Tune",
+            "description": "Software recalibration for stock vehicles. Optimized boost levels, ignition timing, and fuel mapping without hardware changes.",
+            "price": "$500.00",
+            "time": "EST. TIME: 2 HRS",
+            "cta": "BOOK NOW",
+            "image": "computer"
+          },
+          {
+            "number": "02",
+            "badge": "HARDWARE REQ.",
+            "badgeType": "error",
+            "title": "Stage 2 Tune",
+            "description": "Precision optimization for aftermarket modifications including downpipes, cold-air intakes, and upgraded intercoolers.",
+            "price": "PRICE VARIES",
+            "time": "EST. TIME: 2 HRS",
+            "cta": "CONFIGURE",
+            "image": "blueFix"
+          },
+          {
+            "number": "03",
+            "badge": "ELITE LEVEL",
+            "badgeType": "white",
+            "title": "Custom Tune",
+            "description": "The ultimate calibration for unique engine builds. Hybrid turbos, fuel system upgrades, and bored blocks. Dyno-testing integration available.",
+            "price": "PRICE VARIES",
+            "time": "EST. TIME: 3 HRS",
+            "cta": "INQUIRE NOW",
+            "features": ["1-on-1 Engineer Access", "Multi-Map Switching", "Fuel Grade Optimization"],
+            "image": "blackCar"
+          },
+          {
+            "number": "04",
+            "badge": "SHIFT RESPONSE",
+            "badgeType": "primary",
+            "title": "Transmission Tune",
+            "description": "TCM recalibration for lightning-fast gear changes, improved torque limits, and optimized shift points for track or street use.",
+            "price": "$400.00",
+            "time": "EST. TIME: 30 MINS",
+            "cta": "BOOK NOW"
+          },
+          {
+            "number": "05",
+            "badge": "Off-Road Use Only",
+            "badgeType": "error",
+            "title": "DPF & EGR",
+            "description": "Software adjustment specifically designed for off-road or sanctioned race vehicles to maximize airflow and engine longevity.",
+            "price": "$500.00",
+            "time": "EST. TIME: 3 HRS",
+            "cta": "BOOK NOW"
+          },
+          {
+            "number": "06",
+            "title": "Consultation",
+            "description": "Health assessment and goal setting.",
+            "priceLabel": "Fee",
+            "price": "$50.00",
+            "cta": "SCHEDULE",
+            "compact": true,
+            "image": "computer"
+          },
+          {
+            "number": "07",
+            "title": "Pops & Flames",
+            "description": "High-energy ECU additive for visuals.",
+            "priceLabel": "Additive",
+            "price": "$100.00",
+            "cta": "ADD TO CART",
+            "compact": true
+          },
+          {
+            "number": "08",
+            "title": "Pops & Bangs",
+            "description": "Aggressive cosmetic acoustic crackling.",
+            "priceLabel": "Additive",
+            "price": "$50.00",
+            "cta": "ADD TO CART",
+            "compact": true
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "THE LAB WHERE <br/><span class=\"text-primary\">CHAOS IS MEASURED</span>",
+        "description": "Every tune we deliver is forged in the digital fires of our workshop. We don't guess—we analyze. Using military-grade data logging and chassis dynamometers, we ensure your power curve is as smooth as it is terrifying.",
+        "stats": [
+          { "value": "100%", "label": "Digital Stability" },
+          { "value": "+40%", "label": "Typical BHP Gain" }
+        ]
+      },
+      "location": {
+        "heading": "LOCATION & <span class=\"text-primary\">HOURS</span>",
+        "getDirections": "Get Directions",
+        "operationalWindow": "// OPERATIONAL WINDOW"
+      }
+    },
+    "es": {
+      "title": "Home | Navarro Performance",
+      "hero": {
+        "badge": "Liberá la Potencia Pura",
+        "heading": "DISEÑADO PARA <br/><span class=\"text-primary text-glow\">DOMINAR</span>",
+        "description": "Navarro Performance no se trata solo de tunear; se trata de precisión quirúrgica. Recalibramos el ADN de tu vehículo para máximo torque, eficiencia y agresión implacable."
+      },
+      "catalog": {
+        "heading": "PROTOCOLOS DE TUNING",
+        "subtitle": "// 8 SERVICIOS DE GRADO ESCUADRÓN DISPONIBLES",
+        "services": [
+          {
+            "number": "01",
+            "badge": "LISTO PARA ENVIAR",
+            "badgeType": "primary",
+            "title": "Tune Stage 1",
+            "description": "Recalibración de software para vehículos stock. Niveles de boost, tiempo de encendido y mapeo de combustible optimizados sin cambios de hardware.",
+            "price": "$500.00",
+            "time": "TIEMPO EST.: 2 HRS",
+            "cta": "RESERVAR AHORA",
+            "image": "computer"
+          },
+          {
+            "number": "02",
+            "badge": "REQ. HARDWARE",
+            "badgeType": "error",
+            "title": "Tune Stage 2",
+            "description": "Optimización de precisión para modificaciones aftermarket incluyendo downpipes, tomas de aire frío e intercoolers mejorados.",
+            "price": "PRECIO VARIABLE",
+            "time": "TIEMPO EST.: 2 HRS",
+            "cta": "CONFIGURAR",
+            "image": "blueFix"
+          },
+          {
+            "number": "03",
+            "badge": "NIVEL ÉLITE",
+            "badgeType": "white",
+            "title": "Tune Personalizado",
+            "description": "La calibración definitiva para builds de motor únicos. Turbos híbridos, upgrades de sistema de combustible y bloques perforados. Integración con dyno disponible.",
+            "price": "PRECIO VARIABLE",
+            "time": "TIEMPO EST.: 3 HRS",
+            "cta": "CONSULTAR AHORA",
+            "features": ["Acceso 1-a-1 a Ingenieros", "Multi-Map Switching", "Optimización de Grado de Combustible"],
+            "image": "blackCar"
+          },
+          {
+            "number": "04",
+            "badge": "RESPUESTA DE CAMBIO",
+            "badgeType": "primary",
+            "title": "Tune de Transmisión",
+            "description": "Recalibración TCM para cambios de marcha ultrarrápidos, límites de torque mejorados y puntos de cambio optimizados para pista o calle.",
+            "price": "$400.00",
+            "time": "TIEMPO EST.: 30 MINS",
+            "cta": "RESERVAR AHORA"
+          },
+          {
+            "number": "05",
+            "badge": "Solo Uso Off-Road",
+            "badgeType": "error",
+            "title": "DPF & EGR",
+            "description": "Ajuste de software específicamente diseñado para vehículos off-road o de carrera homologados para maximizar el flujo de aire y la longevidad del motor.",
+            "price": "$500.00",
+            "time": "TIEMPO EST.: 3 HRS",
+            "cta": "RESERVAR AHORA"
+          },
+          {
+            "number": "06",
+            "title": "Consulta",
+            "description": "Evaluación de salud y definición de objetivos.",
+            "priceLabel": "Costo",
+            "price": "$50.00",
+            "cta": "AGENDAR",
+            "compact": true,
+            "image": "computer"
+          },
+          {
+            "number": "07",
+            "title": "Pops & Flames",
+            "description": "Aditivo ECU de alta energía para visuales.",
+            "priceLabel": "Aditivo",
+            "price": "$100.00",
+            "cta": "AGREGAR",
+            "compact": true
+          },
+          {
+            "number": "08",
+            "title": "Pops & Bangs",
+            "description": "Crepitar acústico cosmético agresivo.",
+            "priceLabel": "Aditivo",
+            "price": "$50.00",
+            "cta": "AGREGAR",
+            "compact": true
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "EL LABORATORIO DONDE <br/><span class=\"text-primary\">EL CAOS SE MIDE</span>",
+        "description": "Cada tune que entregamos se forja en los fuegos digitales de nuestro taller. No adivinamos — analizamos. Usando registro de datos de grado militar y dinamómetros de chasis, aseguramos que tu curva de potencia sea tan suave como aterradora.",
+        "stats": [
+          { "value": "100%", "label": "Estabilidad Digital" },
+          { "value": "+40%", "label": "Ganancia BHP Típica" }
+        ]
+      },
+      "location": {
+        "heading": "UBICACIÓN Y <span class=\"text-primary\">HORARIOS</span>",
+        "getDirections": "Cómo Llegar",
+        "operationalWindow": "// VENTANA OPERATIVA"
+      }
+    }
+  }
+}

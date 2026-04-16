@@ -1,8 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import config from "../config.json";
+
+const lang = config.meta.defaultLang as keyof typeof config.home;
+const page = config.home[lang];
+const images = config.images;
 ---
 
-<Layout title="Tunning | Navarro Performance">
+<Layout title={page.title}>
   <!-- ========================================== -->
   <!-- 1. HERO SECTION                            -->
   <!-- ========================================== -->
@@ -17,43 +22,44 @@ import Layout from "../layouts/Layout.astro";
     <img
       alt="Featured Build: Navarro Performance"
       class="absolute inset-0 w-full h-full object-cover object-center"
-      src="/images/hero.png"
+      src={images.hero}
     />
 
     <div class="container mx-auto px-8 relative z-20">
       <div class="max-w-4xl">
         <span
           class="inline-block bg-primary text-on-primary-fixed px-4 py-1 font-black italic mb-6"
-          >DOMINATE THE ASPHALT</span
+          data-i18n="home.en.hero.badge">{page.hero.badge}</span
         >
 
         <h1
           class="text-4xl sm:text-5xl md:text-9xl font-black tracking-tighter leading-[0.85] md:leading-[0.85] uppercase italic mb-8"
-        >
-          BUILT FOR <span class="text-primary">SPEED.</span><br />ENGINEERED FOR <span
-            class="text-primary">POWER.</span
-          >
-        </h1>
+          data-i18n="home.en.hero.heading"
+          data-i18n-html
+          set:html={page.hero.heading}
+        />
 
         <p
           class="text-base sm:text-lg md:text-2xl font-body text-on-surface-variant max-w-2xl mb-8 md:mb-12 border-l-4 border-primary pl-4 md:pl-6"
+          data-i18n="home.en.hero.description"
         >
-          We don't just tune cars; we rewrite their DNA. Experience the raw
-          mechanical aggression of Kinetic Velocity.
+          {page.hero.description}
         </p>
 
         <div class="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6">
           <a
             href="/tunning"
             class="bg-primary text-on-primary-fixed w-full sm:w-auto px-6 py-4 md:px-10 md:py-5 text-sm md:text-xl font-black tracking-tighter uppercase hover:scale-105 transition-transform border-4 border-primary/20 text-center inline-block"
+            data-i18n="home.en.hero.ctaPrimary"
           >
-            GET TUNED NOW
+            {page.hero.ctaPrimary}
           </a>
           <a
             href="#builds"
             class="bg-surface-container-highest text-on-surface w-full sm:w-auto px-6 py-4 md:px-10 md:py-5 text-sm md:text-xl font-black tracking-tighter uppercase border-l-4 border-primary hover:bg-surface-bright transition-colors text-center inline-block"
+            data-i18n="home.en.hero.ctaSecondary"
           >
-            VIEW BUILDS
+            {page.hero.ctaSecondary}
           </a>
         </div>
       </div>
@@ -68,62 +74,24 @@ import Layout from "../layouts/Layout.astro";
   >
     <div class="container mx-auto px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div
-          class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors"
-        >
-          <div
-            class="text-6xl font-black italic text-white group-hover:text-primary transition-colors"
-          >
-            50k+
-          </div>
-          <div
-            class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase"
-          >
-            HP ADDED TOTAL
-          </div>
-        </div>
-        <div
-          class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors"
-        >
-          <div
-            class="text-6xl font-black italic text-white group-hover:text-primary transition-colors"
-          >
-            15yrs
-          </div>
-          <div
-            class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase"
-          >
-            ENGINEERING XP
-          </div>
-        </div>
-        <div
-          class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors"
-        >
-          <div
-            class="text-6xl font-black italic text-white group-hover:text-primary transition-colors"
-          >
-            8.4s
-          </div>
-          <div
-            class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase"
-          >
-            QUARTER MILE RECORD
-          </div>
-        </div>
-        <div
-          class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors"
-        >
-          <div
-            class="text-6xl font-black italic text-white group-hover:text-primary transition-colors"
-          >
-            100%
-          </div>
-          <div
-            class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase"
-          >
-            TRACK PROVEN
-          </div>
-        </div>
+        {
+          page.stats.map((stat: any, i: number) => (
+            <div class="bg-surface-container p-6 md:p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors">
+              <div
+                class="text-6xl font-black italic text-white group-hover:text-primary transition-colors"
+                data-i18n={`home.en.stats.${i}.value`}
+              >
+                {stat.value}
+              </div>
+              <div
+                class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase"
+                data-i18n={`home.en.stats.${i}.label`}
+              >
+                {stat.label}
+              </div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -139,32 +107,35 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <h2
             class="text-5xl font-black tracking-tighter italic uppercase mb-4"
+            data-i18n="home.en.services.heading"
+            data-i18n-html
+            set:html={page.services.heading}
+          />
+          <p
+            class="text-on-surface-variant max-w-xl font-body italic"
+            data-i18n="home.en.services.description"
           >
-            <span class="text-primary">ELITE</span> SERVICES
-          </h2>
-          <p class="text-on-surface-variant max-w-xl font-body italic">
-            Our workshop is equipped with the latest diagnostic and performance
-            hardware to ensure every build meets absolute mechanical
-            superiority.
+            {page.services.description}
           </p>
         </div>
         <div class="text-right flex-shrink-0 w-full md:w-64">
           <img
             alt="Mechanical Superiority Workshop"
             class="md:w-64 w-full h-40 object-cover border-r-8 border-primary grayscale hover:grayscale-0 transition-all duration-500"
-            src="/images/computer.png"
+            src={images.computer}
           />
           <div class="h-2 w-full bg-primary mt-2"></div>
           <p
             class="font-label text-on-surface-variant text-xs mt-1 uppercase tracking-widest"
+            data-i18n="home.en.services.workshopLabel"
           >
-            MECHANICAL SUPERIORITY
+            {page.services.workshopLabel}
           </p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Service Card 1 -->
+        <!-- Service Card 1: ECU STAGE -->
         <div
           class="md:col-span-2 relative group overflow-hidden bg-surface-container-high w-full h-[400px]"
           transition:animate="slide"
@@ -172,7 +143,7 @@ import Layout from "../layouts/Layout.astro";
           <img
             alt="ECU Tuning Session in-car"
             class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-            src="/images/blueFix.png"
+            src={images.blueFix}
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
@@ -182,33 +153,41 @@ import Layout from "../layouts/Layout.astro";
           <div class="absolute bottom-0 left-0 p-6 md:p-10">
             <span
               class="bg-error-container text-white px-3 py-1 font-bold text-xs mb-2 md:mb-4 inline-block uppercase"
-              >POPULAR UPGRADE</span
+              data-i18n="home.en.services.cards.0.badge"
+              >{page.services.cards[0].badge}</span
             >
-            <h3 class="text-3xl md:text-4xl font-black italic mb-2">
-              ECU STAGE 1-3 TUNING
+            <h3
+              class="text-3xl md:text-4xl font-black italic mb-2"
+              data-i18n="home.en.services.cards.0.title"
+            >
+              {page.services.cards[0].title}
             </h3>
-            <p class="text-on-surface-variant max-w-md mb-6">
-              Unlock hidden potential. Custom maps for fuel, ignition, and boost
-              control using pro-grade diagnostic tools.
+            <p
+              class="text-on-surface-variant max-w-md mb-6"
+              data-i18n="home.en.services.cards.0.description"
+            >
+              {page.services.cards[0].description}
             </p>
 
             <div class="flex items-center gap-4">
               <span
                 class="bg-primary text-on-primary-fixed px-4 py-2 font-black"
-                >STARTING AT $899</span
+                data-i18n="home.en.services.cards.0.price"
+                >{page.services.cards[0].price}</span
               >
               <button
                 class="text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform"
               >
-                LEARN MORE <span class="material-symbols-outlined"
-                  >arrow_forward</span
+                <span data-i18n="home.en.services.cards.0.cta"
+                  >{page.services.cards[0].cta}</span
                 >
+                <span class="material-symbols-outlined">arrow_forward</span>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Service Card 2 -->
+        <!-- Service Card 2: 1/4 MILE -->
         <div
           class="bg-surface-container border-t-8 border-primary p-6 md:p-10 flex flex-col justify-between"
         >
@@ -216,64 +195,86 @@ import Layout from "../layouts/Layout.astro";
             <span class="material-symbols-outlined text-primary text-5xl mb-6"
               >speed</span
             >
-            <h3 class="text-3xl font-black italic mb-4">1/4 MILE PREP</h3>
-            <p class="text-on-surface-variant">
-              Complete drag strip optimization including suspension tuning and
-              tire packages.
+            <h3
+              class="text-3xl font-black italic mb-4"
+              data-i18n="home.en.services.cards.1.title"
+            >
+              {page.services.cards[1].title}
+            </h3>
+            <p
+              class="text-on-surface-variant"
+              data-i18n="home.en.services.cards.1.description"
+            >
+              {page.services.cards[1].description}
             </p>
           </div>
 
           <div class="mt-12">
-            <div class="text-primary font-black text-2xl mb-4">
-              $2,499 FLAT RATE
+            <div
+              class="text-primary font-black text-2xl mb-4"
+              data-i18n="home.en.services.cards.1.price"
+            >
+              {page.services.cards[1].price}
             </div>
             <button
               class="w-full bg-white text-black py-4 font-black uppercase hover:bg-primary transition-colors"
-              >CONFIGURE BUILD</button
+              data-i18n="home.en.services.cards.1.cta"
+              >{page.services.cards[1].cta}</button
             >
           </div>
         </div>
 
-        <!-- Service Card 3 -->
+        <!-- Service Card 3: DYNO -->
         <div
           class="bg-surface-container border-t-8 border-primary p-6 md:p-10 flex flex-col justify-between relative group overflow-hidden"
         >
           <img
             alt="Porsche on dyno lift"
             class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity"
-            src="/images/bm.png"
+            src={images.bm}
           />
 
           <div class="relative z-10">
             <span class="material-symbols-outlined text-primary text-5xl mb-6"
               >precision_manufacturing</span
             >
-            <h3 class="text-3xl font-black italic mb-4">DYNO TESTING</h3>
-            <p class="text-on-surface-variant">
-              Precise measurement on our AWD-linked chassis dynamometer.
-              Track-ready accuracy.
+            <h3
+              class="text-3xl font-black italic mb-4"
+              data-i18n="home.en.services.cards.2.title"
+            >
+              {page.services.cards[2].title}
+            </h3>
+            <p
+              class="text-on-surface-variant"
+              data-i18n="home.en.services.cards.2.description"
+            >
+              {page.services.cards[2].description}
             </p>
           </div>
 
           <div class="mt-12 relative z-10">
-            <div class="text-primary font-black text-2xl mb-4">
-              $150 / THREE PULLS
+            <div
+              class="text-primary font-black text-2xl mb-4"
+              data-i18n="home.en.services.cards.2.price"
+            >
+              {page.services.cards[2].price}
             </div>
             <button
               class="w-full bg-white text-black py-4 font-black uppercase hover:bg-primary transition-colors"
-              >BOOK SESSION</button
+              data-i18n="home.en.services.cards.2.cta"
+              >{page.services.cards[2].cta}</button
             >
           </div>
         </div>
 
-        <!-- Service Card 4 -->
+        <!-- Service Card 4: FORCED INDUCTION -->
         <div
           class="md:col-span-2 relative group overflow-hidden bg-surface-container-high w-full h-[400px]"
         >
           <img
             alt="highly detailed turbocharger system"
             class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
-            src="/images/forcedInduction.png"
+            src={images.forcedInduction}
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
@@ -281,25 +282,32 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="absolute bottom-0 left-0 p-6 md:p-10">
-            <h3 class="text-3xl md:text-4xl font-black italic mb-2">
-              FORCED INDUCTION
+            <h3
+              class="text-3xl md:text-4xl font-black italic mb-2"
+              data-i18n="home.en.services.cards.3.title"
+            >
+              {page.services.cards[3].title}
             </h3>
-            <p class="text-on-surface-variant max-w-md mb-6">
-              Complete turbo and supercharger installations with structural
-              reinforcement.
+            <p
+              class="text-on-surface-variant max-w-md mb-6"
+              data-i18n="home.en.services.cards.3.description"
+            >
+              {page.services.cards[3].description}
             </p>
 
             <div class="flex items-center gap-4">
               <span
                 class="bg-primary text-on-primary-fixed px-4 py-2 font-black"
-                >STARTING AT $5,500</span
+                data-i18n="home.en.services.cards.3.price"
+                >{page.services.cards[3].price}</span
               >
               <button
                 class="text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform"
               >
-                VIEW PACKAGES <span class="material-symbols-outlined"
-                  >arrow_forward</span
+                <span data-i18n="home.en.services.cards.3.cta"
+                  >{page.services.cards[3].cta}</span
                 >
+                <span class="material-symbols-outlined">arrow_forward</span>
               </button>
             </div>
           </div>
@@ -317,17 +325,22 @@ import Layout from "../layouts/Layout.astro";
         <img
           alt="stock dark sports car"
           class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-500"
-          src="/images/blackCar.png"
+          src={images.blackCar}
         />
         <div
           class="absolute inset-0 bg-black/40 flex items-center justify-center"
         >
-          <span class="text-8xl font-black opacity-20 italic">STOCK</span>
+          <span
+            class="text-8xl font-black opacity-20 italic"
+            data-i18n="home.en.results.stockLabel"
+            >{page.results.stockLabel}</span
+          >
         </div>
         <div
           class="absolute top-0 left-0 bg-white text-black font-black px-6 py-2 uppercase"
+          data-i18n="home.en.results.before"
         >
-          BEFORE
+          {page.results.before}
         </div>
       </div>
 
@@ -337,20 +350,21 @@ import Layout from "../layouts/Layout.astro";
         <img
           alt="Custom Purple BMW M5 Build"
           class="w-full h-full object-cover"
-          src="/images/after.png"
+          src={images.after}
         />
         <div
           class="absolute inset-0 bg-primary/20 flex items-center justify-center"
         >
           <span
             class="text-8xl font-black opacity-60 italic text-white drop-shadow-2xl"
-            >750HP+</span
+            >{page.results.afterValue}</span
           >
         </div>
         <div
           class="absolute top-0 right-0 bg-primary text-on-primary-fixed font-black px-6 py-2 uppercase"
+          data-i18n="home.en.results.after"
         >
-          AFTER
+          {page.results.after}
         </div>
       </div>
     </div>
@@ -369,27 +383,49 @@ import Layout from "../layouts/Layout.astro";
         >
           <h2
             class="text-4xl md:text-5xl font-black italic mb-4 md:mb-6 leading-tight"
+            data-i18n="home.en.booking.heading"
+            data-i18n-html
+            set:html={page.booking.heading}
+          />
+          <p
+            class="text-xl text-on-surface-variant mb-10 font-body"
+            data-i18n="home.en.booking.description"
           >
-            RESERVE YOUR<br /><span class="text-primary">DYNO SLOT.</span>
-          </h2>
-          <p class="text-xl text-on-surface-variant mb-10 font-body">
-            Our calendar fills up weeks in advance. Don't wait to unlock the
-            true power of your machine. Instant confirmation for all stage-1
-            tuning packages.
+            {page.booking.description}
           </p>
 
           <div class="space-y-4">
             <div
               class="flex justify-between items-center bg-surface p-4 border-l-4 border-primary"
             >
-              <div class="font-black italic">NEXT AVAILABLE:</div>
-              <div class="text-primary font-bold">TOMORROW, 09:00 AM</div>
+              <div
+                class="font-black italic"
+                data-i18n="home.en.booking.nextAvailableLabel"
+              >
+                {page.booking.nextAvailableLabel}
+              </div>
+              <div
+                class="text-primary font-bold"
+                data-i18n="home.en.booking.nextAvailableValue"
+              >
+                {page.booking.nextAvailableValue}
+              </div>
             </div>
             <div
               class="flex justify-between items-center bg-surface p-4 border-l-4 border-outline-variant"
             >
-              <div class="font-black italic">LOCATION:</div>
-              <div class="text-white font-bold">HOUSTON HQ, TX</div>
+              <div
+                class="font-black italic"
+                data-i18n="home.en.booking.locationLabel"
+              >
+                {page.booking.locationLabel}
+              </div>
+              <div
+                class="text-white font-bold"
+                data-i18n="home.en.booking.locationValue"
+              >
+                {page.booking.locationValue}
+              </div>
             </div>
           </div>
         </div>
@@ -399,44 +435,50 @@ import Layout from "../layouts/Layout.astro";
             <div>
               <label
                 class="font-label text-xs tracking-widest text-on-surface-variant mb-2 block"
-                >SELECT SERVICE</label
+                data-i18n="home.en.booking.selectService"
+                >{page.booking.selectService}</label
               >
               <select
                 class="w-full bg-surface-container-lowest border-outline-variant text-white p-4 focus:border-primary"
               >
-                <option>STAGE 1 ECU REMAP</option>
-                <option>FULL DYNO SESSION</option>
-                <option>HARDWARE INSTALLATION</option>
+                {
+                  page.booking.serviceOptions.map((opt: string) => (
+                    <option>{opt}</option>
+                  ))
+                }
               </select>
             </div>
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label
                   class="font-label text-xs tracking-widest text-on-surface-variant mb-2 block"
-                  >FULL NAME</label
+                  data-i18n="home.en.booking.fullName"
+                  >{page.booking.fullName}</label
                 >
                 <input
                   class="w-full bg-surface-container-lowest border-outline-variant p-4 focus:border-primary text-white"
-                  placeholder="JOHN DOE"
+                  placeholder={page.booking.fullNamePlaceholder}
                   type="text"
                 />
               </div>
               <div>
                 <label
                   class="font-label text-xs tracking-widest text-on-surface-variant mb-2 block"
-                  >VEHICLE VIN</label
+                  data-i18n="home.en.booking.vehicleVin"
+                  >{page.booking.vehicleVin}</label
                 >
                 <input
                   class="w-full bg-surface-container-lowest border-outline-variant p-4 focus:border-primary text-white"
-                  placeholder="XXXX-XXXX-XXXX"
+                  placeholder={page.booking.vehicleVinPlaceholder}
                   type="text"
                 />
               </div>
             </div>
             <button
               class="w-full bg-primary text-on-primary-fixed py-6 text-2xl font-black uppercase tracking-tighter shadow-[0_8px_16px_rgba(255,143,112,0.3)] hover:scale-[1.02] transition-transform"
+              data-i18n="home.en.booking.submitButton"
             >
-              BOOK YOUR SLOT NOW
+              {page.booking.submitButton}
             </button>
           </div>
         </div>
@@ -451,92 +493,38 @@ import Layout from "../layouts/Layout.astro";
     <div class="container mx-auto px-8">
       <h2
         class="text-3xl md:text-4xl font-black italic mb-10 md:mb-16 border-l-8 border-primary pl-4 md:pl-6"
+        data-i18n="home.en.testimonials.heading"
       >
-        THE STREET SPEAKS
+        {page.testimonials.heading}
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-surface-container p-6 md:p-10 relative">
-          <span
-            class="material-symbols-outlined text-primary/20 text-8xl absolute top-4 right-4"
-            >format_quote</span
-          >
-          <p class="text-xl italic font-body mb-8 relative z-10">
-            "Kinetic Velocity took my Supra from a weekend cruiser to a
-            terrifying monster. 200HP gain with stock internals. Absolutely
-            lethal."
-          </p>
-
-          <div
-            class="flex items-center gap-4 border-t border-outline-variant pt-6"
-          >
-            <div
-              class="w-12 h-12 bg-primary rounded-sm flex items-center justify-center font-black italic"
-            >
-              M.S.
-            </div>
-            <div>
-              <div class="font-black italic">MIKE SANCHEZ</div>
-              <div class="text-xs text-primary font-label uppercase">
-                2021 TOYOTA SUPRA MKV
+        {
+          page.testimonials.items.map((item: any, i: number) => (
+            <div class="bg-surface-container p-6 md:p-10 relative">
+              <span class="material-symbols-outlined text-primary/20 text-8xl absolute top-4 right-4">
+                format_quote
+              </span>
+              <p
+                class="text-xl italic font-body mb-8 relative z-10"
+                data-i18n={`home.en.testimonials.items.${i}.quote`}
+              >
+                {item.quote}
+              </p>
+              <div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+                <div class="w-12 h-12 bg-primary rounded-sm flex items-center justify-center font-black italic">
+                  {item.initials}
+                </div>
+                <div>
+                  <div class="font-black italic">{item.name}</div>
+                  <div class="text-xs text-primary font-label uppercase">
+                    {item.vehicle}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="bg-surface-container p-6 md:p-10 relative">
-          <span
-            class="material-symbols-outlined text-primary/20 text-8xl absolute top-4 right-4"
-            >format_quote</span
-          >
-          <p class="text-xl italic font-body mb-8 relative z-10">
-            "The only shop I trust with my 1/4 mile builds. They understand the
-            engineering, not just the software. Constant communication."
-          </p>
-
-          <div
-            class="flex items-center gap-4 border-t border-outline-variant pt-6"
-          >
-            <div
-              class="w-12 h-12 bg-primary rounded-sm flex items-center justify-center font-black italic"
-            >
-              R.D.
-            </div>
-            <div>
-              <div class="font-black italic">RAY DALTON</div>
-              <div class="text-xs text-primary font-label uppercase">
-                1969 CHEVY CAMARO
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-surface-container p-6 md:p-10 relative">
-          <span
-            class="material-symbols-outlined text-primary/20 text-8xl absolute top-4 right-4"
-            >format_quote</span
-          >
-          <p class="text-xl italic font-body mb-8 relative z-10">
-            "Professional, fast, and aggressive. The throttle response after
-            their Stage 2 tune is night and day. Best money I've spent."
-          </p>
-
-          <div
-            class="flex items-center gap-4 border-t border-outline-variant pt-6"
-          >
-            <div
-              class="w-12 h-12 bg-primary rounded-sm flex items-center justify-center font-black italic"
-            >
-              A.L.
-            </div>
-            <div>
-              <div class="font-black italic">ALEX LEI</div>
-              <div class="text-xs text-primary font-label uppercase">
-                2023 BMW M4 CSL
-              </div>
-            </div>
-          </div>
-        </div>
+          ))
+        }
       </div>
     </div>
   </section>

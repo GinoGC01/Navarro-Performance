@@ -1,8 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import config from "../config.json";
+
+const lang = config.meta.defaultLang as keyof typeof config.tunning;
+const page = config.tunning[lang];
+const images = config.images;
+const contact = config.contact;
+const schedule = config.schedule;
 ---
 
-<Layout title="Home | Navarro Performance">
+<Layout title={page.title}>
   <!-- ============================================== -->
   <!-- 1. HERO SECTION                                -->
   <!-- ============================================== -->
@@ -14,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
       <img
         alt="High-End Performance Hardware"
         class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700"
-        src="/images/hero.png"
+        src={images.hero}
       />
       <div
         class="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent"
@@ -24,20 +31,21 @@ import Layout from "../layouts/Layout.astro";
     <div class="relative z-10 px-8 md:px-16 max-w-5xl">
       <div
         class="inline-block bg-primary text-black px-3 py-1 font-headline font-black text-xs tracking-[0.2em] mb-6 uppercase"
+        data-i18n="tunning.en.hero.badge"
       >
-        Unleash Raw Power
+        {page.hero.badge}
       </div>
       <h1
         class="font-headline font-black text-4xl sm:text-5xl md:text-8xl italic tracking-tighter text-white uppercase leading-[0.9] md:leading-none mb-6"
-      >
-        ENGINEERED TO <br /><span class="text-primary text-glow">DOMINATE</span>
-      </h1>
+        data-i18n="tunning.en.hero.heading"
+        data-i18n-html
+        set:html={page.hero.heading}
+      />
       <p
         class="text-on-surface-variant text-lg md:text-xl max-w-2xl font-light leading-relaxed border-l-4 border-primary pl-6"
+        data-i18n="tunning.en.hero.description"
       >
-        Navarro Performance isn't just about tuning; it's about surgical
-        precision. We recalibrate your vehicle's DNA for maximum torque,
-        efficiency, and relentless asphalt-tearing aggression.
+        {page.hero.description}
       </p>
     </div>
   </section>
@@ -53,15 +61,17 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <h2
             class="font-headline font-black text-3xl md:text-4xl uppercase tracking-tighter text-white mb-2"
+            data-i18n="tunning.en.catalog.heading"
           >
-            TUNING PROTOCOLS
+            {page.catalog.heading}
           </h2>
           <div class="h-1 w-24 bg-primary"></div>
         </div>
         <div
           class="text-on-surface-variant font-label text-sm uppercase tracking-widest"
+          data-i18n="tunning.en.catalog.subtitle"
         >
-          // 8 SQUADRON-GRADE SERVICES AVAILABLE
+          {page.catalog.subtitle}
         </div>
       </div>
 
@@ -80,28 +90,29 @@ import Layout from "../layouts/Layout.astro";
             <img
               alt="Tuning Software"
               class="w-full h-full object-cover"
-              src="/images/computer.png"
+              src={images.computer}
             />
           </div>
           <div>
             <div class="flex justify-between items-start mb-6">
               <span
                 class="bg-primary/10 text-primary px-3 py-1 font-headline font-bold text-[10px] tracking-widest border border-primary/20"
-                >READY TO SHIP</span
+                data-i18n="tunning.en.catalog.services.0.badge"
+                >{page.catalog.services[0].badge}</span
               >
               <span
                 class="text-on-surface-variant font-headline font-bold text-xs"
-                >01</span
+                >{page.catalog.services[0].number}</span
               >
             </div>
             <h3
               class="font-headline font-black text-2xl text-white mb-4 uppercase"
+              data-i18n="tunning.en.catalog.services.0.title"
             >
-              Stage 1 Tune
+              {page.catalog.services[0].title}
             </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
-              Software recalibration for stock vehicles. Optimized boost levels,
-              ignition timing, and fuel mapping without hardware changes.
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.0.description">
+              {page.catalog.services[0].description}
             </p>
           </div>
           <div class="space-y-6">
@@ -109,18 +120,20 @@ import Layout from "../layouts/Layout.astro";
               class="flex justify-between items-center border-t border-outline-variant/30 pt-4"
             >
               <div class="font-headline font-bold text-2xl text-primary">
-                $500.00
+                {page.catalog.services[0].price}
               </div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase tracking-tighter"
+                data-i18n="tunning.en.catalog.services.0.time"
               >
-                EST. TIME: 2 HRS
+                {page.catalog.services[0].time}
               </div>
             </div>
             <button
               class="w-full bg-surface-container border-2 border-primary text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:bg-primary hover:text-black transition-all"
+              data-i18n="tunning.en.catalog.services.0.cta"
             >
-              BOOK NOW
+              {page.catalog.services[0].cta}
             </button>
           </div>
         </div>
@@ -135,47 +148,50 @@ import Layout from "../layouts/Layout.astro";
             <img
               alt="Precision Interface"
               class="w-full h-full object-cover"
-              src="/images/blueFix.png"
+              src={images.blueFix}
             />
           </div>
           <div>
             <div class="flex justify-between items-start mb-6">
               <span
                 class="bg-error-container text-on-error-container px-3 py-1 font-headline font-bold text-[10px] tracking-widest"
-                >HARDWARE REQ.</span
+                data-i18n="tunning.en.catalog.services.1.badge"
+                >{page.catalog.services[1].badge}</span
               >
               <span
                 class="text-on-surface-variant font-headline font-bold text-xs"
-                >02</span
+                >{page.catalog.services[1].number}</span
               >
             </div>
             <h3
               class="font-headline font-black text-2xl text-white mb-4 uppercase"
+              data-i18n="tunning.en.catalog.services.1.title"
             >
-              Stage 2 Tune
+              {page.catalog.services[1].title}
             </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
-              Precision optimization for aftermarket modifications including
-              downpipes, cold-air intakes, and upgraded intercoolers.
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.1.description">
+              {page.catalog.services[1].description}
             </p>
           </div>
           <div class="space-y-6">
             <div
               class="flex justify-between items-center border-t border-outline-variant/30 pt-4"
             >
-              <div class="font-headline font-bold text-xl text-primary">
-                PRICE VARIES
+              <div class="font-headline font-bold text-xl text-primary" data-i18n="tunning.en.catalog.services.1.price">
+                {page.catalog.services[1].price}
               </div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase tracking-tighter"
+                data-i18n="tunning.en.catalog.services.1.time"
               >
-                EST. TIME: 2 HRS
+                {page.catalog.services[1].time}
               </div>
             </div>
             <button
               class="w-full gradient-button text-on-primary-fixed py-4 font-headline font-black uppercase tracking-[0.2em] text-xs active:scale-95 transition-all"
+              data-i18n="tunning.en.catalog.services.1.cta"
             >
-              CONFIGURE
+              {page.catalog.services[1].cta}
             </button>
           </div>
         </div>
@@ -188,7 +204,7 @@ import Layout from "../layouts/Layout.astro";
             <img
               alt="Custom Performance Build"
               class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100"
-              src="/images/blackCar.png"
+              src={images.blackCar}
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-surface-container-highest to-transparent opacity-60"
@@ -197,7 +213,8 @@ import Layout from "../layouts/Layout.astro";
             <div class="absolute top-0 left-0 p-8">
               <span
                 class="bg-white text-black px-3 py-1 font-headline font-bold text-[10px] tracking-widest"
-                >ELITE LEVEL</span
+                data-i18n="tunning.en.catalog.services.2.badge"
+                >{page.catalog.services[2].badge}</span
               >
             </div>
           </div>
@@ -205,60 +222,50 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex justify-between items-start mb-6">
               <span
                 class="text-on-surface-variant font-headline font-bold text-xs uppercase tracking-widest"
-                >Service 03</span
+                >Service {page.catalog.services[2].number}</span
               >
             </div>
             <h3
               class="font-headline font-black text-3xl text-white mb-4 uppercase"
+              data-i18n="tunning.en.catalog.services.2.title"
             >
-              Custom Tune
+              {page.catalog.services[2].title}
             </h3>
-            <p class="text-on-surface-variant text-base mb-8 leading-relaxed">
-              The ultimate calibration for unique engine builds. Hybrid turbos,
-              fuel system upgrades, and bored blocks. Dyno-testing integration
-              available.
+            <p class="text-on-surface-variant text-base mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.2.description">
+              {page.catalog.services[2].description}
             </p>
 
             <ul class="space-y-4 mb-8">
-              <li
-                class="flex items-center gap-3 text-xs font-label text-white uppercase"
-              >
-                <span class="material-symbols-outlined text-primary text-sm"
-                  >check_circle</span
-                > 1-on-1 Engineer Access
-              </li>
-              <li
-                class="flex items-center gap-3 text-xs font-label text-white uppercase"
-              >
-                <span class="material-symbols-outlined text-primary text-sm"
-                  >check_circle</span
-                > Multi-Map Switching
-              </li>
-              <li
-                class="flex items-center gap-3 text-xs font-label text-white uppercase"
-              >
-                <span class="material-symbols-outlined text-primary text-sm"
-                  >check_circle</span
-                > Fuel Grade Optimization
-              </li>
+              {page.catalog.services[2].features?.map((feat: string, fi: number) => (
+                <li
+                  class="flex items-center gap-3 text-xs font-label text-white uppercase"
+                >
+                  <span class="material-symbols-outlined text-primary text-sm"
+                    >check_circle</span
+                  >
+                  <span data-i18n={`tunning.en.catalog.services.2.features.${fi}`}>{feat}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div class="p-6 md:p-8 space-y-6 border-t border-outline-variant/30">
             <div class="flex justify-between items-center">
-              <div class="font-headline font-bold text-xl text-primary">
-                PRICE VARIES
+              <div class="font-headline font-bold text-xl text-primary" data-i18n="tunning.en.catalog.services.2.price">
+                {page.catalog.services[2].price}
               </div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase tracking-tighter"
+                data-i18n="tunning.en.catalog.services.2.time"
               >
-                EST. TIME: 3 HRS
+                {page.catalog.services[2].time}
               </div>
             </div>
             <button
               class="w-full bg-white text-black py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:bg-primary transition-all"
+              data-i18n="tunning.en.catalog.services.2.cta"
             >
-              INQUIRE NOW
+              {page.catalog.services[2].cta}
             </button>
           </div>
         </div>
@@ -271,21 +278,22 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex justify-between items-start mb-6">
               <span
                 class="bg-primary/10 text-primary px-3 py-1 font-headline font-bold text-[10px] tracking-widest border border-primary/20"
-                >SHIFT RESPONSE</span
+                data-i18n="tunning.en.catalog.services.3.badge"
+                >{page.catalog.services[3].badge}</span
               >
               <span
                 class="text-on-surface-variant font-headline font-bold text-xs"
-                >04</span
+                >{page.catalog.services[3].number}</span
               >
             </div>
             <h3
               class="font-headline font-black text-2xl text-white mb-4 uppercase"
+              data-i18n="tunning.en.catalog.services.3.title"
             >
-              Transmission Tune
+              {page.catalog.services[3].title}
             </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
-              TCM recalibration for lightning-fast gear changes, improved torque
-              limits, and optimized shift points for track or street use.
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.3.description">
+              {page.catalog.services[3].description}
             </p>
           </div>
           <div class="space-y-6">
@@ -293,18 +301,20 @@ import Layout from "../layouts/Layout.astro";
               class="flex justify-between items-center border-t border-outline-variant/30 pt-4"
             >
               <div class="font-headline font-bold text-2xl text-primary">
-                $400.00
+                {page.catalog.services[3].price}
               </div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase tracking-tighter"
+                data-i18n="tunning.en.catalog.services.3.time"
               >
-                EST. TIME: 30 MINS
+                {page.catalog.services[3].time}
               </div>
             </div>
             <button
               class="w-full bg-surface-container-high border-2 border-outline-variant text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:border-primary transition-all"
+              data-i18n="tunning.en.catalog.services.3.cta"
             >
-              BOOK NOW
+              {page.catalog.services[3].cta}
             </button>
           </div>
         </div>
@@ -317,21 +327,21 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex justify-between items-start mb-6">
               <span
                 class="bg-error-container text-on-error-container px-3 py-1 font-headline font-bold text-[10px] tracking-widest uppercase"
-                >Off-Road Use Only</span
+                data-i18n="tunning.en.catalog.services.4.badge"
+                >{page.catalog.services[4].badge}</span
               >
               <span
                 class="text-on-surface-variant font-headline font-bold text-xs"
-                >05</span
+                >{page.catalog.services[4].number}</span
               >
             </div>
             <h3
               class="font-headline font-black text-2xl text-white mb-4 uppercase"
             >
-              DPF &amp; EGR
+              {page.catalog.services[4].title}
             </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
-              Software adjustment specifically designed for off-road or
-              sanctioned race vehicles to maximize airflow and engine longevity.
+            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.4.description">
+              {page.catalog.services[4].description}
             </p>
           </div>
           <div class="space-y-6">
@@ -339,18 +349,20 @@ import Layout from "../layouts/Layout.astro";
               class="flex justify-between items-center border-t border-outline-variant/30 pt-4"
             >
               <div class="font-headline font-bold text-2xl text-primary">
-                $500.00
+                {page.catalog.services[4].price}
               </div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase tracking-tighter"
+                data-i18n="tunning.en.catalog.services.4.time"
               >
-                EST. TIME: 3 HRS
+                {page.catalog.services[4].time}
               </div>
             </div>
             <button
               class="w-full bg-surface-container-high border-2 border-outline-variant text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:border-primary transition-all"
+              data-i18n="tunning.en.catalog.services.4.cta"
             >
-              BOOK NOW
+              {page.catalog.services[4].cta}
             </button>
           </div>
         </div>
@@ -365,35 +377,38 @@ import Layout from "../layouts/Layout.astro";
             <img
               alt="Consultation Specialist"
               class="w-full h-full object-cover grayscale"
-              src="/images/computer.png"
+              src={images.computer}
             />
           </div>
           <div class="relative z-10">
             <h3
               class="font-headline font-black text-xl text-white mb-2 uppercase italic"
             >
-              06 // Consultation
+              <span>{page.catalog.services[5].number}</span> // <span data-i18n="tunning.en.catalog.services.5.title">{page.catalog.services[5].title}</span>
             </h3>
             <p
               class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider"
+              data-i18n="tunning.en.catalog.services.5.description"
             >
-              Health assessment and goal setting.
+              {page.catalog.services[5].description}
             </p>
           </div>
           <div class="flex justify-between items-end relative z-10">
             <div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase mb-1"
+                data-i18n="tunning.en.catalog.services.5.priceLabel"
               >
-                Fee
+                {page.catalog.services[5].priceLabel}
               </div>
               <div class="font-headline font-bold text-xl text-white">
-                $50.00
+                {page.catalog.services[5].price}
               </div>
             </div>
             <button
               class="bg-primary text-black px-4 py-2 font-headline font-bold text-[10px] tracking-widest uppercase"
-              >SCHEDULE</button
+              data-i18n="tunning.en.catalog.services.5.cta"
+              >{page.catalog.services[5].cta}</button
             >
           </div>
         </div>
@@ -406,28 +421,31 @@ import Layout from "../layouts/Layout.astro";
             <h3
               class="font-headline font-black text-xl text-white mb-2 uppercase italic"
             >
-              07 // Pops &amp; Flames
+              <span>{page.catalog.services[6].number}</span> // <span data-i18n="tunning.en.catalog.services.6.title">{page.catalog.services[6].title}</span>
             </h3>
             <p
               class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider"
+              data-i18n="tunning.en.catalog.services.6.description"
             >
-              High-energy ECU additive for visuals.
+              {page.catalog.services[6].description}
             </p>
           </div>
           <div class="flex justify-between items-end">
             <div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase mb-1"
+                data-i18n="tunning.en.catalog.services.6.priceLabel"
               >
-                Additive
+                {page.catalog.services[6].priceLabel}
               </div>
               <div class="font-headline font-bold text-xl text-white">
-                $100.00
+                {page.catalog.services[6].price}
               </div>
             </div>
             <button
               class="bg-primary text-black px-4 py-2 font-headline font-bold text-[10px] tracking-widest uppercase"
-              >ADD TO CART</button
+              data-i18n="tunning.en.catalog.services.6.cta"
+              >{page.catalog.services[6].cta}</button
             >
           </div>
         </div>
@@ -440,28 +458,31 @@ import Layout from "../layouts/Layout.astro";
             <h3
               class="font-headline font-black text-xl text-white mb-2 uppercase italic"
             >
-              08 // Pops &amp; Bangs
+              <span>{page.catalog.services[7].number}</span> // <span data-i18n="tunning.en.catalog.services.7.title">{page.catalog.services[7].title}</span>
             </h3>
             <p
               class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider"
+              data-i18n="tunning.en.catalog.services.7.description"
             >
-              Aggressive cosmetic acoustic crackling.
+              {page.catalog.services[7].description}
             </p>
           </div>
           <div class="flex justify-between items-end">
             <div>
               <div
                 class="text-xs font-label text-on-surface-variant uppercase mb-1"
+                data-i18n="tunning.en.catalog.services.7.priceLabel"
               >
-                Additive
+                {page.catalog.services[7].priceLabel}
               </div>
               <div class="font-headline font-bold text-xl text-white">
-                $50.00
+                {page.catalog.services[7].price}
               </div>
             </div>
             <button
               class="bg-primary text-black px-4 py-2 font-headline font-bold text-[10px] tracking-widest uppercase"
-              >ADD TO CART</button
+              data-i18n="tunning.en.catalog.services.7.cta"
+              >{page.catalog.services[7].cta}</button
             >
           </div>
         </div>
@@ -482,48 +503,39 @@ import Layout from "../layouts/Layout.astro";
         <img
           alt="Dyno Room"
           class="w-full h-[500px] object-cover grayscale brightness-50 contrast-125 border-4 border-primary"
-          src="/images/bm.png"
+          src={images.bm}
         />
       </div>
       <div class="lg:w-1/2 space-y-8">
         <h2
           class="font-headline font-black text-4xl md:text-5xl uppercase italic tracking-tighter leading-tight text-white"
-        >
-          THE LAB WHERE <br /><span class="text-primary">CHAOS IS MEASURED</span
-          >
-        </h2>
-        <p class="text-on-surface-variant leading-relaxed">
-          Every tune we deliver is forged in the digital fires of our workshop.
-          We don't guess—we analyze. Using military-grade data logging and
-          chassis dynamometers, we ensure your power curve is as smooth as it is
-          terrifying.
+          data-i18n="tunning.en.showcase.heading"
+          data-i18n-html
+          set:html={page.showcase.heading}
+        />
+        <p class="text-on-surface-variant leading-relaxed" data-i18n="tunning.en.showcase.description">
+          {page.showcase.description}
         </p>
 
         <div class="grid grid-cols-2 gap-4">
-          <div class="bg-surface-container-high p-6 border-l-2 border-primary">
-            <div class="text-primary font-headline font-black text-3xl mb-1">
-              100%
+          {page.showcase.stats.map((stat: any, i: number) => (
+            <div class="bg-surface-container-high p-6 border-l-2 border-primary">
+              <div class="text-primary font-headline font-black text-3xl mb-1">
+                {stat.value}
+              </div>
+              <div
+                class="text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase"
+                data-i18n={`tunning.en.showcase.stats.${i}.label`}
+              >
+                {stat.label}
+              </div>
             </div>
-            <div
-              class="text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase"
-            >
-              Digital Stability
-            </div>
-          </div>
-          <div class="bg-surface-container-high p-6 border-l-2 border-primary">
-            <div class="text-primary font-headline font-black text-3xl mb-1">
-              +40%
-            </div>
-            <div
-              class="text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase"
-            >
-              Typical BHP Gain
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   </section>
+
   <!-- ============================================== -->
   <!-- 4. LOCATION & HOURS SECTION                   -->
   <!-- ============================================== -->
@@ -534,7 +546,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="relative group h-[400px] md:h-[500px] bg-surface-container-highest border-4 border-surface-container overflow-hidden shadow-2xl">
           <div class="absolute inset-0 bg-primary/10 pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-500"></div>
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.332304671404!2d-80.1449525!3d26.1533038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA5JzExLjkiTiA4MMKwMDgnNDEuOCJX!5e0!3m2!1sen!2sus!4v1713292400000!5m2!1sen!2sus" 
+            src={contact.mapEmbed}
             class="w-full h-full border-0 grayscale invert contrast-125 brightness-75 hover:grayscale-0 hover:invert-0 hover:brightness-100 transition-all duration-700" 
             allowfullscreen="" 
             loading="lazy" 
@@ -542,11 +554,12 @@ import Layout from "../layouts/Layout.astro";
           </iframe>
           <div class="absolute bottom-4 left-4 z-20">
             <a 
-              href="https://maps.google.com" 
+              href={contact.mapDirections}
               target="_blank" 
               class="bg-primary text-black px-6 py-3 font-headline font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform inline-block shadow-xl"
+              data-i18n="tunning.en.location.getDirections"
             >
-              Get Directions
+              {page.location.getDirections}
             </a>
           </div>
         </div>
@@ -554,41 +567,37 @@ import Layout from "../layouts/Layout.astro";
         <!-- Details & Schedule -->
         <div class="space-y-10">
           <div>
-            <h2 class="font-headline font-black text-5xl uppercase italic tracking-tighter text-white mb-6">
-              LOCATION & <span class="text-primary">HOURS</span>
-            </h2>
+            <h2 class="font-headline font-black text-5xl uppercase italic tracking-tighter text-white mb-6"
+              data-i18n="tunning.en.location.heading"
+              data-i18n-html
+              set:html={page.location.heading}
+            />
             <div class="h-1 w-24 bg-primary mb-8"></div>
             
             <div class="space-y-4">
-              <a href="tel:7544571445" class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
+              <a href={`tel:${contact.phoneFull}`} class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
                 <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">phone_in_talk</span>
-                <span class="font-headline font-bold text-xl">(754) 457-1445</span>
+                <span class="font-headline font-bold text-xl">{contact.phone}</span>
               </a>
-              <a href="mailto:navarroperformance1@gmail.com" class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
+              <a href={`mailto:${contact.email}`} class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
                 <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
-                <span class="font-headline font-bold text-lg md:text-xl">navarroperformance1@gmail.com</span>
+                <span class="font-headline font-bold text-lg md:text-xl">{contact.email}</span>
               </a>
             </div>
           </div>
 
           <div class="bg-surface-container-highest p-8 border-l-4 border-primary">
-            <h3 class="font-headline font-black text-sm uppercase tracking-[0.2em] text-on-surface-variant mb-6">
-              // OPERATIONAL WINDOW
+            <h3 class="font-headline font-black text-sm uppercase tracking-[0.2em] text-on-surface-variant mb-6"
+              data-i18n="tunning.en.location.operationalWindow"
+            >
+              {page.location.operationalWindow}
             </h3>
             <div class="space-y-3">
-              {[
-                { day: "Monday", hours: "9:00am - 5:00pm" },
-                { day: "Tuesday", hours: "9:00am - 5:00pm" },
-                { day: "Wednesday", hours: "9:00am - 5:00pm" },
-                { day: "Thursday", hours: "9:00am - 5:00pm" },
-                { day: "Friday", hours: "9:00am - 5:00pm" },
-                { day: "Saturday", hours: "9:00am - 5:00pm" },
-                { day: "Sunday", hours: "Closed", special: true },
-              ].map((item) => (
+              {schedule.map((item) => (
                 <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                  <span class="font-headline font-bold text-white uppercase text-sm">{item.day}</span>
-                  <span class={`font-label text-sm ${item.special ? 'text-primary font-black italic' : 'text-on-surface-variant'}`}>
-                    {item.hours}
+                  <span class="font-headline font-bold text-white uppercase text-sm" data-schedule-day>{item.day[lang]}</span>
+                  <span class={`font-label text-sm ${item.closed ? 'text-primary font-black italic' : 'text-on-surface-variant'}`} {...(item.closed ? { "data-schedule-closed": "" } : {})}>
+                    {typeof item.hours === 'string' ? item.hours : (typeof item.hours === 'object' ? item.hours[lang] : item.hours)}
                   </span>
                 </div>
               ))}

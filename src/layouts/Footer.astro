@@ -1,22 +1,25 @@
 ---
 // Footer.astro
+import config from "../config.json";
+const lang = config.meta.defaultLang as keyof typeof config.footer;
+const f = config.footer[lang];
 ---
 
-<footer class="bg-[#000000] border-t-4 border-[#1a1919] flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full gap-8">
+<footer class="bg-[#000000] border-t-4 border-[#1a1919] flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-16 w-full gap-8">
   <div>
-      <div class="text-xl font-black text-white mb-2 uppercase">KINETIC VELOCITY</div>
-      <p class="text-[#ff8f70] font-['Space_Grotesk'] uppercase text-xs tracking-[0.2em] mb-4">ENGINEERING ADRENALINE SINCE 2009</p>
-      <p class="text-gray-500 font-['Space_Grotesk'] uppercase text-[10px] tracking-[0.2em]">©2024 KINETIC VELOCITY PERFORMANCE. ALL RIGHTS RESERVED. NO LIMITS.</p>
+      <div class="text-xl font-black text-white mb-2 uppercase">{config.meta.brand}</div>
+      <p class="text-primary font-['Space_Grotesk'] uppercase text-xs tracking-[0.2em] mb-4" data-i18n="footer.en.tagline">{f.tagline}</p>
+      <p class="text-gray-500 font-['Space_Grotesk'] uppercase text-[10px] tracking-[0.2em]" data-i18n="footer.en.copyright">{f.copyright}</p>
   </div>
   
   <div class="flex gap-12 font-['Space_Grotesk'] uppercase text-xs tracking-[0.2em]">
       <div class="flex flex-col gap-3">
-          <a class="text-[#ff8f70]" href="#">PRIVACY POLICY</a>
-          <a class="text-gray-500 hover:text-white transition-colors" href="#">TERMS OF SERVICE</a>
+          <a class="text-primary" href="#" data-i18n="footer.en.privacyPolicy">{f.privacyPolicy}</a>
+          <a class="text-gray-500 hover:text-white transition-colors" href="#" data-i18n="footer.en.termsOfService">{f.termsOfService}</a>
       </div>
       <div class="flex flex-col gap-3">
-          <a class="text-gray-500 hover:text-white transition-colors" href="#">SHIPPING</a>
-          <a class="text-gray-500 hover:text-white transition-colors" href="#">REFUNDS</a>
+          <a class="text-gray-500 hover:text-white transition-colors" href="#" data-i18n="footer.en.shipping">{f.shipping}</a>
+          <a class="text-gray-500 hover:text-white transition-colors" href="#" data-i18n="footer.en.refunds">{f.refunds}</a>
       </div>
   </div>
   
