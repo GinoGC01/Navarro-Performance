@@ -4,6 +4,7 @@ import config from "../config.json";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -29,7 +30,6 @@ const lang = config.meta.defaultLang;
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <link rel="stylesheet" href="/src/styles/global.css" />
     <ClientRouter />
   </head>
   <body>
@@ -98,15 +98,17 @@ const lang = config.meta.defaultLang;
             { en: "Thursday", es: "Jueves" },
             { en: "Friday", es: "Viernes" },
             { en: "Saturday", es: "Sábado" },
-            { en: "Sunday", es: "Domingo" }
+            { en: "Sunday", es: "Domingo" },
           ];
           const closedText = { en: "Closed", es: "Cerrado" };
           const dayEls = document.querySelectorAll("[data-schedule-day]");
           dayEls.forEach((el, i) => {
-            if (schedDays[i]) el.textContent = schedDays[i][lang] || schedDays[i].en;
+            if (schedDays[i])
+              el.textContent = schedDays[i][lang] || schedDays[i].en;
           });
           const closedEl = document.querySelector("[data-schedule-closed]");
-          if (closedEl) closedEl.textContent = closedText[lang] || closedText.en;
+          if (closedEl)
+            closedEl.textContent = closedText[lang] || closedText.en;
         }
 
         // Global event delegation for the toggle button
