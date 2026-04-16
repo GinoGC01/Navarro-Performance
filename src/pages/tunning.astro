@@ -81,118 +81,126 @@ const schedule = config.schedule;
       >
         <!-- Stage 1 Tune -->
         <div
-          class="group bg-surface-container-highest p-6 md:p-8 border-l-4 border-transparent hover:border-primary transition-all duration-300 flex flex-col justify-between shadow-xl relative overflow-hidden"
+          class="group relative bg-surface-container-highest border-l-4 border-transparent hover:border-primary transition-all duration-500 shadow-2xl overflow-hidden min-h-[480px] flex flex-col"
           transition:animate="slide"
         >
-          <div
-            class="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10 group-hover:opacity-30 transition-opacity rotate-12"
-          >
+          <!-- Background Image with Gradient Overlay -->
+          <div class="absolute inset-0 z-0">
             <img
-              alt="Tuning Software"
-              class="w-full h-full object-cover"
+              alt=""
+              class="w-full h-full object-cover opacity-20 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700"
               src={images.computer}
             />
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0e0e0e] via-[#0e0e0e]/90 to-transparent"></div>
           </div>
-          <div>
-            <div class="flex justify-between items-start mb-6">
-              <span
-                class="bg-primary/10 text-primary px-3 py-1 font-headline font-bold text-[10px] tracking-widest border border-primary/20"
-                data-i18n="tunning.en.catalog.services.0.badge"
-                >{page.catalog.services[0].badge}</span
-              >
-              <span
-                class="text-on-surface-variant font-headline font-bold text-xs"
-                >{page.catalog.services[0].number}</span
-              >
-            </div>
-            <h3
-              class="font-headline font-black text-2xl text-white mb-4 uppercase"
-              data-i18n="tunning.en.catalog.services.0.title"
-            >
-              {page.catalog.services[0].title}
-            </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.0.description">
-              {page.catalog.services[0].description}
-            </p>
-          </div>
-          <div class="space-y-6">
-            <div
-              class="flex justify-between items-center border-t border-outline-variant/30 pt-4"
-            >
-              <div class="font-headline font-bold text-2xl text-primary">
-                {page.catalog.services[0].price}
+
+          <div class="relative z-10 p-6 md:p-10 flex flex-col h-full flex-grow justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-8">
+                <span
+                  class="bg-primary/20 text-primary px-3 py-1 font-headline font-bold text-[10px] tracking-[0.2em] border border-primary/30 uppercase"
+                  data-i18n="tunning.en.catalog.services.0.badge"
+                >
+                  {page.catalog.services[0].badge}
+                </span>
+                <span class="text-white/20 font-headline font-black text-2xl group-hover:text-primary/40 transition-colors">
+                  {page.catalog.services[0].number}
+                </span>
               </div>
-              <div
-                class="text-xs font-label text-on-surface-variant uppercase tracking-tighter"
-                data-i18n="tunning.en.catalog.services.0.time"
+              <h3
+                class="font-headline font-black text-3xl text-white mb-4 uppercase italic tracking-tighter"
+                data-i18n="tunning.en.catalog.services.0.title"
               >
-                {page.catalog.services[0].time}
-              </div>
+                {page.catalog.services[0].title}
+              </h3>
+              <p 
+                class="text-on-surface-variant text-sm md:text-base mb-8 leading-relaxed max-w-[90%]" 
+                data-i18n="tunning.en.catalog.services.0.description"
+              >
+                {page.catalog.services[0].description}
+              </p>
             </div>
-            <button
-              class="w-full bg-surface-container border-2 border-primary text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:bg-primary hover:text-black transition-all"
-              data-i18n="tunning.en.catalog.services.0.cta"
-            >
-              {page.catalog.services[0].cta}
-            </button>
+            
+            <div class="mt-auto pt-6 border-t border-white/10">
+              <div class="flex justify-between items-end mb-6">
+                <div>
+                  <div class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-1" data-i18n="tunning.en.catalog.services.0.time">
+                    {page.catalog.services[0].time}
+                  </div>
+                  <div class="font-headline font-black text-3xl text-white">
+                    {page.catalog.services[0].price}
+                  </div>
+                </div>
+              </div>
+              <button
+                class="w-full bg-transparent border-2 border-primary text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:bg-primary hover:text-black transition-all duration-300"
+                data-i18n="tunning.en.catalog.services.0.cta"
+              >
+                {page.catalog.services[0].cta}
+              </button>
+            </div>
           </div>
         </div>
 
         <!-- Stage 2 Tune -->
         <div
-          class="group bg-surface-container-highest p-6 md:p-8 border-l-4 border-transparent hover:border-primary transition-all duration-300 flex flex-col justify-between shadow-xl relative overflow-hidden"
+          class="group relative bg-surface-container-highest border-l-4 border-transparent hover:border-primary transition-all duration-500 shadow-2xl overflow-hidden min-h-[480px] flex flex-col"
         >
-          <div
-            class="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10 group-hover:opacity-30 transition-opacity -rotate-12"
-          >
+          <!-- Background Image with Gradient Overlay -->
+          <div class="absolute inset-0 z-0">
             <img
-              alt="Precision Interface"
-              class="w-full h-full object-cover"
+              alt=""
+              class="w-full h-full object-cover opacity-20 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700"
               src={images.blueFix}
             />
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0e0e0e] via-[#0e0e0e]/90 to-transparent"></div>
           </div>
-          <div>
-            <div class="flex justify-between items-start mb-6">
-              <span
-                class="bg-error-container text-on-error-container px-3 py-1 font-headline font-bold text-[10px] tracking-widest"
-                data-i18n="tunning.en.catalog.services.1.badge"
-                >{page.catalog.services[1].badge}</span
-              >
-              <span
-                class="text-on-surface-variant font-headline font-bold text-xs"
-                >{page.catalog.services[1].number}</span
-              >
-            </div>
-            <h3
-              class="font-headline font-black text-2xl text-white mb-4 uppercase"
-              data-i18n="tunning.en.catalog.services.1.title"
-            >
-              {page.catalog.services[1].title}
-            </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.1.description">
-              {page.catalog.services[1].description}
-            </p>
-          </div>
-          <div class="space-y-6">
-            <div
-              class="flex justify-between items-center border-t border-outline-variant/30 pt-4"
-            >
-              <div class="font-headline font-bold text-xl text-primary" data-i18n="tunning.en.catalog.services.1.price">
-                {page.catalog.services[1].price}
+
+          <div class="relative z-10 p-6 md:p-10 flex flex-col h-full flex-grow justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-8">
+                <span
+                  class="bg-error/20 text-error px-3 py-1 font-headline font-bold text-[10px] tracking-[0.2em] border border-error/30 uppercase"
+                  data-i18n="tunning.en.catalog.services.1.badge"
+                >
+                  {page.catalog.services[1].badge}
+                </span>
+                <span class="text-white/20 font-headline font-black text-2xl group-hover:text-primary/40 transition-colors">
+                  {page.catalog.services[1].number}
+                </span>
               </div>
-              <div
-                class="text-xs font-label text-on-surface-variant uppercase tracking-tighter"
-                data-i18n="tunning.en.catalog.services.1.time"
+              <h3
+                class="font-headline font-black text-3xl text-white mb-4 uppercase italic tracking-tighter"
+                data-i18n="tunning.en.catalog.services.1.title"
               >
-                {page.catalog.services[1].time}
-              </div>
+                {page.catalog.services[1].title}
+              </h3>
+              <p 
+                class="text-on-surface-variant text-sm md:text-base mb-8 leading-relaxed max-w-[90%]" 
+                data-i18n="tunning.en.catalog.services.1.description"
+              >
+                {page.catalog.services[1].description}
+              </p>
             </div>
-            <button
-              class="w-full gradient-button text-on-primary-fixed py-4 font-headline font-black uppercase tracking-[0.2em] text-xs active:scale-95 transition-all"
-              data-i18n="tunning.en.catalog.services.1.cta"
-            >
-              {page.catalog.services[1].cta}
-            </button>
+
+            <div class="mt-auto pt-6 border-t border-white/10">
+              <div class="flex justify-between items-end mb-6">
+                <div>
+                  <div class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-1" data-i18n="tunning.en.catalog.services.1.time">
+                    {page.catalog.services[1].time}
+                  </div>
+                  <div class="font-headline font-black text-3xl text-white" data-i18n="tunning.en.catalog.services.1.price">
+                    {page.catalog.services[1].price}
+                  </div>
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-black py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 shadow-[0_4px_15px_rgba(255,94,0,0.3)]"
+                data-i18n="tunning.en.catalog.services.1.cta"
+              >
+                {page.catalog.services[1].cta}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -231,27 +239,39 @@ const schedule = config.schedule;
             >
               {page.catalog.services[2].title}
             </h3>
-            <p class="text-on-surface-variant text-base mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.2.description">
+            <p
+              class="text-on-surface-variant text-base mb-8 leading-relaxed"
+              data-i18n="tunning.en.catalog.services.2.description"
+            >
               {page.catalog.services[2].description}
             </p>
 
             <ul class="space-y-4 mb-8">
-              {page.catalog.services[2].features?.map((feat: string, fi: number) => (
-                <li
-                  class="flex items-center gap-3 text-xs font-label text-white uppercase"
-                >
-                  <span class="material-symbols-outlined text-primary text-sm"
-                    >check_circle</span
-                  >
-                  <span data-i18n={`tunning.en.catalog.services.2.features.${fi}`}>{feat}</span>
-                </li>
-              ))}
+              {
+                page.catalog.services[2].features?.map(
+                  (feat: string, fi: number) => (
+                    <li class="flex items-center gap-3 text-xs font-label text-white uppercase">
+                      <span class="material-symbols-outlined text-primary text-sm">
+                        check_circle
+                      </span>
+                      <span
+                        data-i18n={`tunning.en.catalog.services.2.features.${fi}`}
+                      >
+                        {feat}
+                      </span>
+                    </li>
+                  ),
+                )
+              }
             </ul>
           </div>
 
           <div class="p-6 md:p-8 space-y-6 border-t border-outline-variant/30">
             <div class="flex justify-between items-center">
-              <div class="font-headline font-bold text-xl text-primary" data-i18n="tunning.en.catalog.services.2.price">
+              <div
+                class="font-headline font-bold text-xl text-primary"
+                data-i18n="tunning.en.catalog.services.2.price"
+              >
                 {page.catalog.services[2].price}
               </div>
               <div
@@ -292,7 +312,10 @@ const schedule = config.schedule;
             >
               {page.catalog.services[3].title}
             </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.3.description">
+            <p
+              class="text-on-surface-variant text-sm mb-8 leading-relaxed"
+              data-i18n="tunning.en.catalog.services.3.description"
+            >
               {page.catalog.services[3].description}
             </p>
           </div>
@@ -340,7 +363,10 @@ const schedule = config.schedule;
             >
               {page.catalog.services[4].title}
             </h3>
-            <p class="text-on-surface-variant text-sm mb-8 leading-relaxed" data-i18n="tunning.en.catalog.services.4.description">
+            <p
+              class="text-on-surface-variant text-sm mb-8 leading-relaxed"
+              data-i18n="tunning.en.catalog.services.4.description"
+            >
               {page.catalog.services[4].description}
             </p>
           </div>
@@ -384,7 +410,10 @@ const schedule = config.schedule;
             <h3
               class="font-headline font-black text-xl text-white mb-2 uppercase italic"
             >
-              <span>{page.catalog.services[5].number}</span> // <span data-i18n="tunning.en.catalog.services.5.title">{page.catalog.services[5].title}</span>
+              <span>{page.catalog.services[5].number}</span> // <span
+                data-i18n="tunning.en.catalog.services.5.title"
+                >{page.catalog.services[5].title}</span
+              >
             </h3>
             <p
               class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider"
@@ -421,7 +450,10 @@ const schedule = config.schedule;
             <h3
               class="font-headline font-black text-xl text-white mb-2 uppercase italic"
             >
-              <span>{page.catalog.services[6].number}</span> // <span data-i18n="tunning.en.catalog.services.6.title">{page.catalog.services[6].title}</span>
+              <span>{page.catalog.services[6].number}</span> // <span
+                data-i18n="tunning.en.catalog.services.6.title"
+                >{page.catalog.services[6].title}</span
+              >
             </h3>
             <p
               class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider"
@@ -458,7 +490,10 @@ const schedule = config.schedule;
             <h3
               class="font-headline font-black text-xl text-white mb-2 uppercase italic"
             >
-              <span>{page.catalog.services[7].number}</span> // <span data-i18n="tunning.en.catalog.services.7.title">{page.catalog.services[7].title}</span>
+              <span>{page.catalog.services[7].number}</span> // <span
+                data-i18n="tunning.en.catalog.services.7.title"
+                >{page.catalog.services[7].title}</span
+              >
             </h3>
             <p
               class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider"
@@ -513,24 +548,29 @@ const schedule = config.schedule;
           data-i18n-html
           set:html={page.showcase.heading}
         />
-        <p class="text-on-surface-variant leading-relaxed" data-i18n="tunning.en.showcase.description">
+        <p
+          class="text-on-surface-variant leading-relaxed"
+          data-i18n="tunning.en.showcase.description"
+        >
           {page.showcase.description}
         </p>
 
         <div class="grid grid-cols-2 gap-4">
-          {page.showcase.stats.map((stat: any, i: number) => (
-            <div class="bg-surface-container-high p-6 border-l-2 border-primary">
-              <div class="text-primary font-headline font-black text-3xl mb-1">
-                {stat.value}
+          {
+            page.showcase.stats.map((stat: any, i: number) => (
+              <div class="bg-surface-container-high p-6 border-l-2 border-primary">
+                <div class="text-primary font-headline font-black text-3xl mb-1">
+                  {stat.value}
+                </div>
+                <div
+                  class="text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase"
+                  data-i18n={`tunning.en.showcase.stats.${i}.label`}
+                >
+                  {stat.label}
+                </div>
               </div>
-              <div
-                class="text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase"
-                data-i18n={`tunning.en.showcase.stats.${i}.label`}
-              >
-                {stat.label}
-              </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </div>
@@ -539,23 +579,31 @@ const schedule = config.schedule;
   <!-- ============================================== -->
   <!-- 4. LOCATION & HOURS SECTION                   -->
   <!-- ============================================== -->
-  <section class="bg-surface-container-low py-20 px-4 md:px-8 border-t-4 border-surface-container">
+  <section
+    class="bg-surface-container-low py-20 px-4 md:px-8 border-t-4 border-surface-container"
+  >
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Modern Interactive Map Container -->
-        <div class="relative group h-[400px] md:h-[500px] bg-surface-container-highest border-4 border-surface-container overflow-hidden shadow-2xl">
-          <div class="absolute inset-0 bg-primary/10 pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-500"></div>
-          <iframe 
+        <div
+          class="relative group h-[400px] md:h-[500px] bg-surface-container-highest border-4 border-surface-container overflow-hidden shadow-2xl"
+        >
+          <div
+            class="absolute inset-0 bg-primary/10 pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-500"
+          >
+          </div>
+          <iframe
             src={contact.mapEmbed}
-            class="w-full h-full border-0 grayscale invert contrast-125 brightness-75 hover:grayscale-0 hover:invert-0 hover:brightness-100 transition-all duration-700" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            class="w-full h-full border-0 grayscale invert contrast-125 brightness-75 hover:grayscale-0 hover:invert-0 hover:brightness-100 transition-all duration-700"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
           </iframe>
           <div class="absolute bottom-4 left-4 z-20">
-            <a 
+            <a
               href={contact.mapDirections}
-              target="_blank" 
+              target="_blank"
               class="bg-primary text-black px-6 py-3 font-headline font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform inline-block shadow-xl"
               data-i18n="tunning.en.location.getDirections"
             >
@@ -567,40 +615,74 @@ const schedule = config.schedule;
         <!-- Details & Schedule -->
         <div class="space-y-10">
           <div>
-            <h2 class="font-headline font-black text-5xl uppercase italic tracking-tighter text-white mb-6"
+            <h2
+              class="font-headline font-black text-5xl uppercase italic tracking-tighter text-white mb-6"
               data-i18n="tunning.en.location.heading"
               data-i18n-html
               set:html={page.location.heading}
             />
             <div class="h-1 w-24 bg-primary mb-8"></div>
-            
+
             <div class="space-y-4">
-              <a href={`tel:${contact.phoneFull}`} class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
-                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">phone_in_talk</span>
-                <span class="font-headline font-bold text-xl">{contact.phone}</span>
+              <a
+                href={`tel:${contact.phoneFull}`}
+                class="flex items-center gap-4 text-white hover:text-primary transition-colors group"
+              >
+                <span
+                  class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform"
+                  >phone_in_talk</span
+                >
+                <span class="font-headline font-bold text-xl"
+                  >{contact.phone}</span
+                >
               </a>
-              <a href={`mailto:${contact.email}`} class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
-                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
-                <span class="font-headline font-bold text-lg md:text-xl">{contact.email}</span>
+              <a
+                href={`mailto:${contact.email}`}
+                class="flex items-center gap-4 text-white hover:text-primary transition-colors group"
+              >
+                <span
+                  class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform"
+                  >mail</span
+                >
+                <span class="font-headline font-bold text-lg md:text-xl"
+                  >{contact.email}</span
+                >
               </a>
             </div>
           </div>
 
-          <div class="bg-surface-container-highest p-8 border-l-4 border-primary">
-            <h3 class="font-headline font-black text-sm uppercase tracking-[0.2em] text-on-surface-variant mb-6"
+          <div
+            class="bg-surface-container-highest p-8 border-l-4 border-primary"
+          >
+            <h3
+              class="font-headline font-black text-sm uppercase tracking-[0.2em] text-on-surface-variant mb-6"
               data-i18n="tunning.en.location.operationalWindow"
             >
               {page.location.operationalWindow}
             </h3>
             <div class="space-y-3">
-              {schedule.map((item) => (
-                <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                  <span class="font-headline font-bold text-white uppercase text-sm" data-schedule-day>{item.day[lang]}</span>
-                  <span class={`font-label text-sm ${item.closed ? 'text-primary font-black italic' : 'text-on-surface-variant'}`} {...(item.closed ? { "data-schedule-closed": "" } : {})}>
-                    {typeof item.hours === 'string' ? item.hours : (typeof item.hours === 'object' ? item.hours[lang] : item.hours)}
-                  </span>
-                </div>
-              ))}
+              {
+                schedule.map((item) => (
+                  <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                    <span
+                      class="font-headline font-bold text-white uppercase text-sm"
+                      data-schedule-day
+                    >
+                      {item.day[lang]}
+                    </span>
+                    <span
+                      class={`font-label text-sm ${item.closed ? "text-primary font-black italic" : "text-on-surface-variant"}`}
+                      {...(item.closed ? { "data-schedule-closed": "" } : {})}
+                    >
+                      {typeof item.hours === "string"
+                        ? item.hours
+                        : typeof item.hours === "object"
+                          ? item.hours[lang]
+                          : item.hours}
+                    </span>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>
