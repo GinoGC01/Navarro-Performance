@@ -524,4 +524,78 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+  <!-- ============================================== -->
+  <!-- 4. LOCATION & HOURS SECTION                   -->
+  <!-- ============================================== -->
+  <section class="bg-surface-container-low py-20 px-4 md:px-8 border-t-4 border-surface-container">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Modern Interactive Map Container -->
+        <div class="relative group h-[400px] md:h-[500px] bg-surface-container-highest border-4 border-surface-container overflow-hidden shadow-2xl">
+          <div class="absolute inset-0 bg-primary/10 pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.332304671404!2d-80.1449525!3d26.1533038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA5JzExLjkiTiA4MMKwMDgnNDEuOCJX!5e0!3m2!1sen!2sus!4v1713292400000!5m2!1sen!2sus" 
+            class="w-full h-full border-0 grayscale invert contrast-125 brightness-75 hover:grayscale-0 hover:invert-0 hover:brightness-100 transition-all duration-700" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="absolute bottom-4 left-4 z-20">
+            <a 
+              href="https://maps.google.com" 
+              target="_blank" 
+              class="bg-primary text-black px-6 py-3 font-headline font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform inline-block shadow-xl"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Details & Schedule -->
+        <div class="space-y-10">
+          <div>
+            <h2 class="font-headline font-black text-5xl uppercase italic tracking-tighter text-white mb-6">
+              LOCATION & <span class="text-primary">HOURS</span>
+            </h2>
+            <div class="h-1 w-24 bg-primary mb-8"></div>
+            
+            <div class="space-y-4">
+              <a href="tel:7544571445" class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
+                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">phone_in_talk</span>
+                <span class="font-headline font-bold text-xl">(754) 457-1445</span>
+              </a>
+              <a href="mailto:navarroperformance1@gmail.com" class="flex items-center gap-4 text-white hover:text-primary transition-colors group">
+                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+                <span class="font-headline font-bold text-lg md:text-xl">navarroperformance1@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-highest p-8 border-l-4 border-primary">
+            <h3 class="font-headline font-black text-sm uppercase tracking-[0.2em] text-on-surface-variant mb-6">
+              // OPERATIONAL WINDOW
+            </h3>
+            <div class="space-y-3">
+              {[
+                { day: "Monday", hours: "9:00am - 5:00pm" },
+                { day: "Tuesday", hours: "9:00am - 5:00pm" },
+                { day: "Wednesday", hours: "9:00am - 5:00pm" },
+                { day: "Thursday", hours: "9:00am - 5:00pm" },
+                { day: "Friday", hours: "9:00am - 5:00pm" },
+                { day: "Saturday", hours: "9:00am - 5:00pm" },
+                { day: "Sunday", hours: "Closed", special: true },
+              ].map((item) => (
+                <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                  <span class="font-headline font-bold text-white uppercase text-sm">{item.day}</span>
+                  <span class={`font-label text-sm ${item.special ? 'text-primary font-black italic' : 'text-on-surface-variant'}`}>
+                    {item.hours}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
