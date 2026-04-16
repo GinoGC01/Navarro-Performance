@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Navarro Performance | Services &amp; Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#777575",
+                      "primary-fixed": "#ff7852",
+                      "primary": "#ff8f70",
+                      "inverse-primary": "#b22e00",
+                      "error-container": "#9f0519",
+                      "on-surface-variant": "#adaaaa",
+                      "surface-container": "#1a1919",
+                      "primary-container": "#ff7852",
+                      "on-primary-fixed-variant": "#581200",
+                      "on-tertiary": "#5e5f60",
+                      "background": "#0e0e0e",
+                      "on-primary-fixed": "#000000",
+                      "primary-fixed-dim": "#ff5d2e",
+                      "outline-variant": "#494847",
+                      "on-tertiary-container": "#555757",
+                      "surface-variant": "#262626",
+                      "on-secondary-fixed-variant": "#5c5b5b",
+                      "on-error": "#490006",
+                      "surface-container-low": "#131313",
+                      "tertiary-fixed": "#ffffff",
+                      "surface-container-highest": "#262626",
+                      "on-background": "#ffffff",
+                      "tertiary-container": "#ebebeb",
+                      "inverse-on-surface": "#565554",
+                      "surface-container-lowest": "#000000",
+                      "on-primary-container": "#480d00",
+                      "on-primary": "#5c1300",
+                      "on-secondary-container": "#d2d0cf",
+                      "inverse-surface": "#fcf8f8",
+                      "error": "#ff716c",
+                      "secondary-dim": "#d6d4d3",
+                      "on-surface": "#ffffff",
+                      "on-secondary-fixed": "#403f3f",
+                      "surface-bright": "#2c2c2c",
+                      "secondary-container": "#474746",
+                      "primary-dim": "#ff734c",
+                      "error-dim": "#d7383b",
+                      "surface": "#0e0e0e",
+                      "surface-tint": "#ff8f70",
+                      "secondary": "#e5e2e1",
+                      "tertiary-dim": "#ebebeb",
+                      "on-secondary": "#525151",
+                      "secondary-fixed-dim": "#d6d4d3",
+                      "secondary-fixed": "#e5e2e1",
+                      "tertiary-fixed-dim": "#f0f1f1",
+                      "on-tertiary-fixed-variant": "#6c6d6e",
+                      "on-error-container": "#ffa8a3",
+                      "surface-container-high": "#201f1f",
+                      "surface-dim": "#0e0e0e",
+                      "tertiary": "#f9f9f9",
+                      "on-tertiary-fixed": "#4f5051"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Work Sans"],
+                      "label": ["Space Grotesk"]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255, 143, 112, 0.4);
+        }
+        .gradient-button {
+            background: linear-gradient(135deg, #ff8f70 0%, #ff7852 100%);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-black">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full border-b-2 border-neutral-800 bg-neutral-950/80 backdrop-blur-xl z-50 shadow-[0_8px_16px_rgba(0,0,0,0.4)] h-20">
+<div class="flex justify-between items-center w-full px-8 h-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-white font-headline">KINETIC VELOCITY</div>
+<div class="hidden md:flex gap-8 font-headline tracking-tight uppercase items-center">
+<a class="text-white/70 hover:text-white transition-colors hover:bg-neutral-800/50 hover:scale-[1.02] transition-transform" href="#">CATALOG</a>
+<a class="text-orange-500 border-b-2 border-orange-500 pb-1" href="#">TUNING</a>
+<a class="text-white/70 hover:text-white transition-colors hover:bg-neutral-800/50 hover:scale-[1.02] transition-transform" href="#">UPGRADES</a>
+<a class="text-white/70 hover:text-white transition-colors hover:bg-neutral-800/50 hover:scale-[1.02] transition-transform" href="#">WORKSHOP</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-4">
+<span class="material-symbols-outlined text-white/70 cursor-pointer hover:text-primary transition-colors">shopping_cart</span>
+<span class="material-symbols-outlined text-white/70 cursor-pointer hover:text-primary transition-colors">account_circle</span>
+</div>
+<button class="gradient-button text-on-primary-fixed px-6 py-2 font-headline font-bold uppercase tracking-widest text-sm active:scale-95 duration-150 ease-in-out">
+                    BOOK NOW
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center overflow-hidden border-b-4 border-primary">
+<div class="absolute inset-0 z-0">
+<img alt="High-End Performance Hardware" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ujdh8ew03Xbxldk4hOcS11mZh3KjxcGdkCFe1gY-Z3diuzHjc_e7Y8AToX0qHSxmRRJV-3Y2xGKhe1GTFvw82HqsBHt0hsxdRlOD7u-PhGj9iKQ-V0T0YeW8a-0NKOwVPwM6ZGRIPjiLtMJlHze8hxH5LsJA2blB3JPqhh9Xn3SdMu4FRA6LdkoZoGjO-em-OjetWxCBoIMSz9Hd457n3PbnEbPAm8xQA9Kh4k0XcU_kcG7Y8AYuP2hT4J-3PSV8TjBf7mWJWkqGw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 md:px-16 max-w-5xl">
+<div class="inline-block bg-primary text-black px-3 py-1 font-headline font-black text-xs tracking-[0.2em] mb-6 uppercase">
+                    Unleash Raw Power
+                </div>
+<h1 class="font-headline font-black text-6xl md:text-8xl italic tracking-tighter text-white uppercase leading-none mb-6">
+                    ENGINEERED TO <br/><span class="text-primary text-glow">DOMINATE</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl font-light leading-relaxed border-l-4 border-primary pl-6">
+                    Navarro Performance isn't just about tuning; it's about surgical precision. We recalibrate your vehicle's DNA for maximum torque, efficiency, and relentless asphalt-tearing aggression. 
+                </p>
+</div>
+</section>
+<!-- Service Catalog Section -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline font-black text-4xl uppercase tracking-tighter text-white mb-2">TUNING PROTOCOLS</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="text-on-surface-variant font-label text-sm uppercase tracking-widest">
+                        // 8 SQUADRON-GRADE SERVICES AVAILABLE
+                    </div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Stage 1 Tune -->
+<div class="group bg-surface-container-highest p-8 border-l-4 border-transparent hover:border-primary transition-all duration-300 flex flex-col justify-between shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10 group-hover:opacity-30 transition-opacity rotate-12">
+<img alt="Tuning Software" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujypm-1o1LbweKXudHfkvFs4Tz-LmfBuZu4Lgc8qAvjEBTVrlLZsffNyoMEcmm1ZGOwNAR4vmwQQ_UMZCmNskzP1p_hRxOOwv94TLox0VTuS0n_wHVM2_rQ457moGs4BjarfNjhidDVqweOLqfR_v-3R46ahM1lgwkpq-1wjpDjuq4xLKfp9sY63YAe-LKCnnZuzHgGS29SrgkaGsar7JZWLOrIq09Pz8jbKwKTL40P0hkNVPeIy1C5MyZJKsQDXh9IC94WdV285w"/>
+</div>
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-primary/10 text-primary px-3 py-1 font-headline font-bold text-[10px] tracking-widest border border-primary/20">READY TO SHIP</span>
+<span class="text-on-surface-variant font-headline font-bold text-xs">01</span>
+</div>
+<h3 class="font-headline font-black text-2xl text-white mb-4 uppercase">Stage 1 Tune</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Software recalibration for stock vehicles. Optimized boost levels, ignition timing, and fuel mapping without hardware changes.</p>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-t border-outline-variant/30 pt-4">
+<div class="font-headline font-bold text-2xl text-primary">$500.00</div>
+<div class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">EST. TIME: 2 HRS</div>
+</div>
+<button class="w-full bg-surface-container border-2 border-primary text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:bg-primary hover:text-black transition-all">
+                                BOOK NOW
+                            </button>
+</div>
+</div>
+<!-- Stage 2 Tune -->
+<div class="group bg-surface-container-highest p-8 border-l-4 border-transparent hover:border-primary transition-all duration-300 flex flex-col justify-between shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-48 h-48 -mr-16 -mt-16 opacity-10 group-hover:opacity-30 transition-opacity -rotate-12">
+<img alt="Precision Interface" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujypm-1o1LbweKXudHfkvFs4Tz-LmfBuZu4Lgc8qAvjEBTVrlLZsffNyoMEcmm1ZGOwNAR4vmwQQ_UMZCmNskzP1p_hRxOOwv94TLox0VTuS0n_wHVM2_rQ457moGs4BjarfNjhidDVqweOLqfR_v-3R46ahM1lgwkpq-1wjpDjuq4xLKfp9sY63YAe-LKCnnZuzHgGS29SrgkaGsar7JZWLOrIq09Pz8jbKwKTL40P0hkNVPeIy1C5MyZJKsQDXh9IC94WdV285w"/>
+</div>
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-error-container text-on-error-container px-3 py-1 font-headline font-bold text-[10px] tracking-widest">HARDWARE REQ.</span>
+<span class="text-on-surface-variant font-headline font-bold text-xs">02</span>
+</div>
+<h3 class="font-headline font-black text-2xl text-white mb-4 uppercase">Stage 2 Tune</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Precision optimization for aftermarket modifications including downpipes, cold-air intakes, and upgraded intercoolers.</p>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-t border-outline-variant/30 pt-4">
+<div class="font-headline font-bold text-xl text-primary">PRICE VARIES</div>
+<div class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">EST. TIME: 2 HRS</div>
+</div>
+<button class="w-full gradient-button text-on-primary-fixed py-4 font-headline font-black uppercase tracking-[0.2em] text-xs active:scale-95 transition-all">
+                                CONFIGURE
+                            </button>
+</div>
+</div>
+<!-- Custom Tune -->
+<div class="group bg-surface-container-highest p-0 border-l-4 border-transparent hover:border-primary transition-all duration-300 flex flex-col justify-between shadow-xl relative overflow-hidden lg:row-span-2">
+<div class="relative h-64 overflow-hidden">
+<img alt="Custom Performance Build" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida/ADBb0uiWDA-5toqpYCozvImlptygG9dSbAh4c-QSQ_pomVJUoj54nTJA9nl7qaAzjPnH4_pBGm-eqaDpTZl2N6k6uys7Xz5ARvHle2Y1GbjLMbv-1tZV4VvKgDs8C3mooCbELLC49XNE0ymIeBlCHLa_eC8_ucHvsSRNGMoyMqMipKDf9327wrrf3GDnP_AUY8h2GwekVy6maYiWag8MCvjKEHtJVAmxxWbyJlt56Eime5R_t9xVU6yBPWc9QCdmlZq8yDjogs-GrAJuhQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest to-transparent opacity-60"></div>
+<div class="absolute top-0 left-0 p-8">
+<span class="bg-white text-black px-3 py-1 font-headline font-bold text-[10px] tracking-widest">ELITE LEVEL</span>
+</div>
+</div>
+<div class="p-8 flex-grow">
+<div class="flex justify-between items-start mb-6">
+<span class="text-on-surface-variant font-headline font-bold text-xs uppercase tracking-widest">Service 03</span>
+</div>
+<h3 class="font-headline font-black text-3xl text-white mb-4 uppercase">Custom Tune</h3>
+<p class="text-on-surface-variant text-base mb-8 leading-relaxed">The ultimate calibration for unique engine builds. Hybrid turbos, fuel system upgrades, and bored blocks. Dyno-testing integration available.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-xs font-label text-white uppercase"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 1-on-1 Engineer Access</li>
+<li class="flex items-center gap-3 text-xs font-label text-white uppercase"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Multi-Map Switching</li>
+<li class="flex items-center gap-3 text-xs font-label text-white uppercase"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Fuel Grade Optimization</li>
+</ul>
+</div>
+<div class="p-8 space-y-6 border-t border-outline-variant/30">
+<div class="flex justify-between items-center">
+<div class="font-headline font-bold text-xl text-primary">PRICE VARIES</div>
+<div class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">EST. TIME: 3 HRS</div>
+</div>
+<button class="w-full bg-white text-black py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:bg-primary transition-all">
+                                INQUIRE NOW
+                            </button>
+</div>
+</div>
+<!-- Transmission Tune -->
+<div class="group bg-surface-container-highest p-8 border-l-4 border-transparent hover:border-primary transition-all duration-300 flex flex-col justify-between shadow-xl relative">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-primary/10 text-primary px-3 py-1 font-headline font-bold text-[10px] tracking-widest border border-primary/20">SHIFT RESPONSE</span>
+<span class="text-on-surface-variant font-headline font-bold text-xs">04</span>
+</div>
+<h3 class="font-headline font-black text-2xl text-white mb-4 uppercase">Transmission Tune</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">TCM recalibration for lightning-fast gear changes, improved torque limits, and optimized shift points for track or street use.</p>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-t border-outline-variant/30 pt-4">
+<div class="font-headline font-bold text-2xl text-primary">$400.00</div>
+<div class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">EST. TIME: 30 MINS</div>
+</div>
+<button class="w-full bg-surface-container-high border-2 border-outline-variant text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:border-primary transition-all">
+                                BOOK NOW
+                            </button>
+</div>
+</div>
+<!-- DPF & EGR -->
+<div class="group bg-surface-container-highest p-8 border-l-4 border-transparent hover:border-primary transition-all duration-300 flex flex-col justify-between shadow-xl relative">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-error-container text-on-error-container px-3 py-1 font-headline font-bold text-[10px] tracking-widest uppercase">Off-Road Use Only</span>
+<span class="text-on-surface-variant font-headline font-bold text-xs">05</span>
+</div>
+<h3 class="font-headline font-black text-2xl text-white mb-4 uppercase">DPF &amp; EGR</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Software adjustment specifically designed for off-road or sanctioned race vehicles to maximize airflow and engine longevity.</p>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-t border-outline-variant/30 pt-4">
+<div class="font-headline font-bold text-2xl text-primary">$500.00</div>
+<div class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">EST. TIME: 3 HRS</div>
+</div>
+<button class="w-full bg-surface-container-high border-2 border-outline-variant text-white py-4 font-headline font-black uppercase tracking-[0.2em] text-xs hover:border-primary transition-all">
+                                BOOK NOW
+                            </button>
+</div>
+</div>
+<!-- Pre-tune Consultation -->
+<div class="group bg-surface-container p-8 border-2 border-outline-variant/20 flex flex-col justify-between hover:bg-surface-bright transition-colors relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<img alt="Consultation Specialist" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida/ADBb0uiWDA-5toqpYCozvImlptygG9dSbAh4c-QSQ_pomVJUoj54nTJA9nl7qaAzjPnH4_pBGm-eqaDpTZl2N6k6uys7Xz5ARvHle2Y1GbjLMbv-1tZV4VvKgDs8C3mooCbELLC49XNE0ymIeBlCHLa_eC8_ucHvsSRNGMoyMqMipKDf9327wrrf3GDnP_AUY8h2GwekVy6maYiWag8MCvjKEHtJVAmxxWbyJlt56Eime5R_t9xVU6yBPWc9QCdmlZq8yDjogs-GrAJuhQ"/>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline font-black text-xl text-white mb-2 uppercase italic">06 // Consultation</h3>
+<p class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider">Health assessment and goal setting.</p>
+</div>
+<div class="flex justify-between items-end relative z-10">
+<div>
+<div class="text-xs font-label text-on-surface-variant uppercase mb-1">Fee</div>
+<div class="font-headline font-bold text-xl text-white">$50.00</div>
+</div>
+<button class="bg-primary text-black px-4 py-2 font-headline font-bold text-[10px] tracking-widest uppercase">SCHEDULE</button>
+</div>
+</div>
+<!-- Pops & Flames -->
+<div class="group bg-surface-container p-8 border-2 border-outline-variant/20 flex flex-col justify-between hover:bg-surface-bright transition-colors">
+<div>
+<h3 class="font-headline font-black text-xl text-white mb-2 uppercase italic">07 // Pops &amp; Flames</h3>
+<p class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider">High-energy ECU additive for visuals.</p>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<div class="text-xs font-label text-on-surface-variant uppercase mb-1">Additive</div>
+<div class="font-headline font-bold text-xl text-white">$100.00</div>
+</div>
+<button class="bg-primary text-black px-4 py-2 font-headline font-bold text-[10px] tracking-widest uppercase">ADD TO CART</button>
+</div>
+</div>
+<!-- Pops & Bangs -->
+<div class="group bg-surface-container p-8 border-2 border-outline-variant/20 flex flex-col justify-between hover:bg-surface-bright transition-colors">
+<div>
+<h3 class="font-headline font-black text-xl text-white mb-2 uppercase italic">08 // Pops &amp; Bangs</h3>
+<p class="text-on-surface-variant text-xs mb-6 uppercase tracking-wider">Aggressive cosmetic acoustic crackling.</p>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<div class="text-xs font-label text-on-surface-variant uppercase mb-1">Additive</div>
+<div class="font-headline font-bold text-xl text-white">$50.00</div>
+</div>
+<button class="bg-primary text-black px-4 py-2 font-headline font-bold text-[10px] tracking-widest uppercase">ADD TO CART</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Showcase Section -->
+<section class="bg-background py-24 px-8 border-y-4 border-outline-variant/20 relative overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<img alt="Dyno Room" class="w-full h-[500px] object-cover grayscale brightness-50 contrast-125 border-4 border-primary" data-alt="A dark industrial dyno room with a high-performance sports car undergoing testing, surrounded by monitors showing digital telemetry and data curves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByK-0NrdmBt4qY6lT-fn3EG5F75oYkt-kl-XpaVz6TIMZSTe_Ox0MxWyrBxgsCBbPZ4ta0MGpglkvqFXyULR6I7udezCw71WbpU52mDwRoUFtgpAVYaqeQpVOotXZrQiRpBhV8DCZmBA8SfNH37hMZ1DaCT_vi_VdcJwXxZwZgy9FyxInHlO-f124WZfk_IbckYd3QzDos998ih1MCdkr_Qf1MMhqHzFySHapingXkYI7RBRQPI3_5v3QG6tlmc6SK1kvA8DDFeGg"/>
+</div>
+<div class="lg:w-1/2 space-y-8">
+<h2 class="font-headline font-black text-5xl uppercase italic tracking-tighter leading-tight text-white">
+                        THE LAB WHERE <br/><span class="text-primary">CHAOS IS MEASURED</span>
+</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        Every tune we deliver is forged in the digital fires of our workshop. We don't guess—we analyze. Using military-grade data logging and chassis dynamometers, we ensure your power curve is as smooth as it is terrifying.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high p-6 border-l-2 border-primary">
+<div class="text-primary font-headline font-black text-3xl mb-1">100%</div>
+<div class="text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase">Digital Stability</div>
+</div>
+<div class="bg-surface-container-high p-6 border-l-2 border-primary">
+<div class="text-primary font-headline font-black text-3xl mb-1">+40%</div>
+<div class="text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase">Typical BHP Gain</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full border-t-4 border-orange-500 pt-12 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-7xl mx-auto">
+<div>
+<div class="text-xl font-black text-white font-headline mb-4">KINETIC VELOCITY</div>
+<p class="text-neutral-500 font-label text-xs leading-relaxed max-w-sm mb-6">
+                    WE ARE THE ARCHITECTS OF SPEED. EVERY LINE OF CODE, EVERY PSI OF BOOST, EVERY REVOLUTION OF THE CRANKSHAFT IS ENGINEERED FOR PURE ADRENALINE.
+                </p>
+<div class="text-orange-500 font-headline text-[10px] tracking-widest uppercase">©2024 KINETIC VELOCITY. ENGINEERED FOR ADRENALINE.</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-3">
+<h4 class="text-white font-headline font-bold text-sm tracking-widest uppercase mb-4">EXPLORE</h4>
+<a class="block text-neutral-500 font-label text-xs uppercase tracking-widest hover:text-white transition-colors" href="#">PRIVACY</a>
+<a class="block text-neutral-500 font-label text-xs uppercase tracking-widest hover:text-white transition-colors" href="#">TERMS</a>
+</div>
+<div class="space-y-3">
+<h4 class="text-white font-headline font-bold text-sm tracking-widest uppercase mb-4">CONNECT</h4>
+<a class="block text-neutral-500 font-label text-xs uppercase tracking-widest hover:text-white transition-colors" href="#">FLEET SERVICES</a>
+<a class="block text-neutral-500 font-label text-xs uppercase tracking-widest hover:text-white transition-colors" href="#">LOCATIONS</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

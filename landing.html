@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#5c5b5b",
+                        "inverse-on-surface": "#565554",
+                        "surface-bright": "#2c2c2c",
+                        "on-primary-fixed": "#000000",
+                        "surface": "#0e0e0e",
+                        "error": "#ff716c",
+                        "tertiary-fixed": "#ffffff",
+                        "surface-container-lowest": "#000000",
+                        "surface-container": "#1a1919",
+                        "tertiary-fixed-dim": "#f0f1f1",
+                        "secondary-fixed-dim": "#d6d4d3",
+                        "tertiary": "#f9f9f9",
+                        "surface-dim": "#0e0e0e",
+                        "background": "#0e0e0e",
+                        "primary-fixed": "#ff7852",
+                        "on-primary-container": "#480d00",
+                        "on-primary": "#5c1300",
+                        "secondary-container": "#474746",
+                        "primary-fixed-dim": "#ff5d2e",
+                        "on-primary-fixed-variant": "#581200",
+                        "on-tertiary-fixed-variant": "#6c6d6e",
+                        "surface-container-high": "#201f1f",
+                        "on-secondary-container": "#d2d0cf",
+                        "on-tertiary-fixed": "#4f5051",
+                        "surface-tint": "#ff8f70",
+                        "on-tertiary": "#5e5f60",
+                        "on-error-container": "#ffa8a3",
+                        "tertiary-dim": "#ebebeb",
+                        "secondary-dim": "#d6d4d3",
+                        "primary-container": "#ff7852",
+                        "inverse-surface": "#fcf8f8",
+                        "surface-container-low": "#131313",
+                        "primary": "#ff8f70",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-surface": "#ffffff",
+                        "surface-container-highest": "#262626",
+                        "on-secondary-fixed": "#403f3f",
+                        "tertiary-container": "#ebebeb",
+                        "secondary": "#e5e2e1",
+                        "on-secondary": "#525151",
+                        "on-surface-variant": "#adaaaa",
+                        "inverse-primary": "#b22e00",
+                        "on-tertiary-container": "#555757",
+                        "primary-dim": "#ff734c",
+                        "outline": "#777575",
+                        "error-dim": "#d7383b",
+                        "surface-variant": "#262626",
+                        "on-background": "#ffffff",
+                        "outline-variant": "#494847",
+                        "error-container": "#9f0519",
+                        "on-error": "#490006"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Work Sans"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #0e0e0e; color: white; }
+        h1, h2, h3, .font-space { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .grid-bg {
+            background-image: linear-gradient(to right, #1a1919 1px, transparent 1px), linear-gradient(to bottom, #1a1919 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 border-b-2 border-[#ff8f70]/20 bg-[#0e0e0e]/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full shadow-[0_8px_16px_rgba(0,0,0,0.4)]">
+<div class="text-2xl font-black italic tracking-tighter text-[#ff8f70]">
+        KINETIC VELOCITY
+    </div>
+<div class="hidden md:flex gap-8 font-['Space_Grotesk'] font-bold tracking-tighter uppercase">
+<a class="text-[#ff8f70] border-b-2 border-[#ff8f70] pb-1" href="#">INVENTORY</a>
+<a class="text-white hover:text-[#ff8f70] transition-colors" href="#">PERFORMANCE</a>
+<a class="text-white hover:text-[#ff8f70] transition-colors" href="#">REVIEWS</a>
+<a class="text-white hover:text-[#ff8f70] transition-colors" href="#">LOCATIONS</a>
+</div>
+<button class="bg-primary text-on-primary-fixed px-6 py-2 font-black text-sm tracking-widest hover:scale-105 transition-transform duration-200">
+        BOOK APPOINTMENT
+    </button>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden grid-bg">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10"></div>
+<img alt="Featured Build: Red Ferrari Race Car" class="absolute inset-0 w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/ADBb0ugO_vwJhrC6GQojbj5Tihewa68Qb1pD_Aw06cJ5m-e4FUCvsRiQ9RWkicDU0jzNOSa4lsOKuUM_y27h1_BOXIsAXnCseRs26cfJiyWP4IW0yPtR0HuzsqB9vW7s9wY6bRgYbeT4LORpA_3zy0b7i3Dlko_i5TaAF2sVhxZlRtXc07TvQJ8sj4cl_zjO3V_ysGjlCO4FF8Dj49KpTVXN-9-a96rjgRM2LsrZq2q3mKQSpEYHop4OzogUPdqjqTGTBHob0HsEVdNFaA"/>
+<div class="container mx-auto px-8 relative z-20">
+<div class="max-w-4xl">
+<span class="inline-block bg-primary text-on-primary-fixed px-4 py-1 font-black italic mb-6">DOMINATE THE ASPHALT</span>
+<h1 class="text-6xl md:text-9xl font-black tracking-tighter leading-[0.85] uppercase italic mb-8">
+                    BUILT FOR <span class="text-primary">SPEED.</span><br/>ENGINEERED FOR <span class="text-primary">POWER.</span>
+</h1>
+<p class="text-xl md:text-2xl font-body text-on-surface-variant max-w-2xl mb-12 border-l-4 border-primary pl-6">
+                    We don't just tune cars; we rewrite their DNA. Experience the raw mechanical aggression of Kinetic Velocity.
+                </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-primary text-on-primary-fixed px-10 py-5 text-xl font-black tracking-tighter uppercase hover:scale-105 transition-transform border-4 border-primary/20">
+                        GET TUNED NOW
+                    </button>
+<button class="bg-surface-container-highest text-on-surface px-10 py-5 text-xl font-black tracking-tighter uppercase border-l-4 border-primary hover:bg-surface-bright transition-colors">
+                        VIEW BUILDS
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-lowest py-20 border-y-4 border-surface-container">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors">
+<div class="text-6xl font-black italic text-white group-hover:text-primary transition-colors">50k+</div>
+<div class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase">HP ADDED TOTAL</div>
+</div>
+<div class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors">
+<div class="text-6xl font-black italic text-white group-hover:text-primary transition-colors">15yrs</div>
+<div class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase">ENGINEERING XP</div>
+</div>
+<div class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors">
+<div class="text-6xl font-black italic text-white group-hover:text-primary transition-colors">8.4s</div>
+<div class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase">QUARTER MILE RECORD</div>
+</div>
+<div class="bg-surface-container p-10 border-b-8 border-primary group hover:bg-surface-container-high transition-colors">
+<div class="text-6xl font-black italic text-white group-hover:text-primary transition-colors">100%</div>
+<div class="font-label text-on-surface-variant tracking-[0.2em] mt-2 uppercase">TRACK PROVEN</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+<div>
+<h2 class="text-5xl font-black tracking-tighter italic uppercase mb-4"><span class="text-primary">ELITE</span> SERVICES</h2>
+<p class="text-on-surface-variant max-w-xl font-body italic">Our workshop is equipped with the latest diagnostic and performance hardware to ensure every build meets absolute mechanical superiority.</p>
+</div>
+<div class="text-right flex-shrink-0">
+<img alt="Mechanical Superiority Workshop" class="w-64 h-40 object-cover border-r-8 border-primary grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ujdh8ew03Xbxldk4hOcS11mZh3KjxcGdkCFe1gY-Z3diuzHjc_e7Y8AToX0qHSxmRRJV-3Y2xGKhe1GTFvw82HqsBHt0hsxdRlOD7u-PhGj9iKQ-V0T0YeW8a-0NKOwVPwM6ZGRIPjiLtMJlHze8hxH5LsJA2blB3JPqhh9Xn3SdMu4FRA6LdkoZoGjO-em-OjetWxCBoIMSz9Hd457n3PbnEbPAm8xQA9Kh4k0XcU_kcG7Y8AYuP2hT4J-3PSV8TjBf7mWJWkqGw"/>
+<div class="h-2 w-full bg-primary mt-2"></div>
+<p class="font-label text-on-surface-variant text-xs mt-1 uppercase tracking-widest">MECHANICAL SUPERIORITY</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Service Card 1 -->
+<div class="md:col-span-2 relative group overflow-hidden bg-surface-container-high aspect-video md:aspect-auto h-full min-h-[400px]">
+<img alt="ECU Tuning Session in-car" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ujypm-1o1LbweKXudHfkvFs4Tz-LmfBuZu4Lgc8qAvjEBTVrlLZsffNyoMEcmm1ZGOwNAR4vmwQQ_UMZCmNskzP1p_hRxOOwv94TLox0VTuS0n_wHVM2_rQ457moGs4BjarfNjhidDVqweOLqfR_v-3R46ahM1lgwkpq-1wjpDjuq4xLKfp9sY63YAe-LKCnnZuzHgGS29SrgkaGsar7JZWLOrIq09Pz8jbKwKTL40P0hkNVPeIy1C5MyZJKsQDXh9IC94WdV285w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="bg-error-container text-white px-3 py-1 font-bold text-xs mb-4 inline-block uppercase">POPULAR UPGRADE</span>
+<h3 class="text-4xl font-black italic mb-2">ECU STAGE 1-3 TUNING</h3>
+<p class="text-on-surface-variant max-w-md mb-6">Unlock hidden potential. Custom maps for fuel, ignition, and boost control using pro-grade diagnostic tools.</p>
+<div class="flex items-center gap-4">
+<span class="bg-primary text-on-primary-fixed px-4 py-2 font-black">STARTING AT $899</span>
+<button class="text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                                LEARN MORE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container border-t-8 border-primary p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-5xl mb-6">speed</span>
+<h3 class="text-3xl font-black italic mb-4">1/4 MILE PREP</h3>
+<p class="text-on-surface-variant">Complete drag strip optimization including suspension tuning and tire packages.</p>
+</div>
+<div class="mt-12">
+<div class="text-primary font-black text-2xl mb-4">$2,499 FLAT RATE</div>
+<button class="w-full bg-white text-black py-4 font-black uppercase hover:bg-primary transition-colors">CONFIGURE BUILD</button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container border-t-8 border-primary p-10 flex flex-col justify-between relative group overflow-hidden">
+<img alt="Porsche on dyno lift" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0uiWDA-5toqpYCozvImlptygG9dSbAh4c-QSQ_pomVJUoj54nTJA9nl7qaAzjPnH4_pBGm-eqaDpTZl2N6k6uys7Xz5ARvHle2Y1GbjLMbv-1tZV4VvKgDs8C3mooCbELLC49XNE0ymIeBlCHLa_eC8_ucHvsSRNGMoyMqMipKDf9327wrrf3GDnP_AUY8h2GwekVy6maYiWag8MCvjKEHtJVAmxxWbyJlt56Eime5R_t9xVU6yBPWc9QCdmlZq8yDjogs-GrAJuhQ"/>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">precision_manufacturing</span>
+<h3 class="text-3xl font-black italic mb-4">DYNO TESTING</h3>
+<p class="text-on-surface-variant">Precise measurement on our AWD-linked chassis dynamometer. Track-ready accuracy.</p>
+</div>
+<div class="mt-12 relative z-10">
+<div class="text-primary font-black text-2xl mb-4">$150 / THREE PULLS</div>
+<button class="w-full bg-white text-black py-4 font-black uppercase hover:bg-primary transition-colors">BOOK SESSION</button>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="md:col-span-2 relative group overflow-hidden bg-surface-container-high aspect-video md:aspect-auto h-[400px]">
+<img alt="highly detailed turbocharger system" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsHUk8_BiSE_h4p0Og8efDlmca8I8jRL8ew7WiYDyNytmQxXfrfh_G1EW5QdSUjWE8ko8C36xzKM8tJsbJSdpqPOUQPRFZfcghFKAxJgaH7mxSMy8pGbRbZMEe_2kW4Zdh_Oe4ogUlDtykHVk4KxvsWjQpjVNYXvmsyltuGkm4UB4KYx9-c-s-rosrMNnJRGKiOxqwZCy_GDayc1Uh53W1-Zt5TgSGw-9J5TDpOWe-uWjDkoTPBNps1_LsNXejkenJemgbdd61ztQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<h3 class="text-4xl font-black italic mb-2">FORCED INDUCTION</h3>
+<p class="text-on-surface-variant max-w-md mb-6">Complete turbo and supercharger installations with structural reinforcement.</p>
+<div class="flex items-center gap-4">
+<span class="bg-primary text-on-primary-fixed px-4 py-2 font-black">STARTING AT $5,500</span>
+<button class="text-white flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                                VIEW PACKAGES <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Results Banner -->
+<section class="py-0 relative overflow-hidden">
+<div class="flex flex-col md:flex-row h-[600px]">
+<div class="relative w-full md:w-1/2 h-full group overflow-hidden">
+<img alt="stock dark sports car" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6nXsD4ffxhx3xUszqhcxvKmOiqj0ParJVWH1UKMPxiCTODIPc3ET903pSMpO07xqkP63uniDDDf8XPKThglpfoldrW3TH3xPfvqhntYmi2EGj1mMnMcUyu6IZG-AjLG9yedn30qhOIsDu3okieNOVaalQGQt9jOpx6bItz0gEoZZKFXV63kglnpxEhoCNd0jYtiHikzVrKrcT9rsjmY2Q4T_cqzBNHCQWjDcT5vSE14c2Uf5p0janI2zWHHIgjB6ZYHMNNc2BSr8"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="text-8xl font-black opacity-20 italic">STOCK</span>
+</div>
+<div class="absolute top-0 left-0 bg-white text-black font-black px-6 py-2 uppercase">BEFORE</div>
+</div>
+<div class="relative w-full md:w-1/2 h-full group overflow-hidden border-l-4 border-primary">
+<img alt="Custom Purple BMW M5 Build" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugQX3e6_Kg_ay5J96GLE-1h_kxzcaGGjIDnQWQvej65OtU11chWm7ff7uyWmcpQEKDaD94H-ClCOn3Kzesh9HdQQPOCZKnt2vNw_m2kExNgD1JPZLk1uGoJpeZYB8FeXlcf7_G0zLGsKOkgaRHrBCzzC6n862wjCLD8c43DFwdUfMHhQQCTq6aXCA38NvkUgaYiEOjUfnElljbZ2lTVcRyQkgRjk6ibspq6eXB_vdGvUvCgQ-0Sh3-KYwZlFSFcPi4t47tlVM62xQ"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="text-8xl font-black opacity-60 italic text-white drop-shadow-2xl">750HP+</span>
+</div>
+<div class="absolute top-0 right-0 bg-primary text-on-primary-fixed font-black px-6 py-2 uppercase">AFTER</div>
+</div>
+</div>
+</section>
+<!-- Urgent Booking Widget -->
+<section class="py-24 grid-bg">
+<div class="container mx-auto px-8">
+<div class="bg-surface-container border-4 border-primary flex flex-col md:flex-row items-stretch">
+<div class="p-12 md:w-1/2 border-b-4 md:border-b-0 md:border-r-4 border-primary">
+<h2 class="text-5xl font-black italic mb-6">RESERVE YOUR<br/><span class="text-primary">DYNO SLOT.</span></h2>
+<p class="text-xl text-on-surface-variant mb-10 font-body">Our calendar fills up weeks in advance. Don't wait to unlock the true power of your machine. Instant confirmation for all stage-1 tuning packages.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center bg-surface p-4 border-l-4 border-primary">
+<div class="font-black italic">NEXT AVAILABLE:</div>
+<div class="text-primary font-bold">TOMORROW, 09:00 AM</div>
+</div>
+<div class="flex justify-between items-center bg-surface p-4 border-l-4 border-outline-variant">
+<div class="font-black italic">LOCATION:</div>
+<div class="text-white font-bold">HOUSTON HQ, TX</div>
+</div>
+</div>
+</div>
+<div class="p-12 md:w-1/2 bg-surface-container-highest">
+<div class="grid grid-cols-1 gap-6">
+<div>
+<label class="font-label text-xs tracking-widest text-on-surface-variant mb-2 block">SELECT SERVICE</label>
+<select class="w-full bg-surface-container-lowest border-outline-variant text-white p-4 focus:border-primary">
+<option>STAGE 1 ECU REMAP</option>
+<option>FULL DYNO SESSION</option>
+<option>HARDWARE INSTALLATION</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="font-label text-xs tracking-widest text-on-surface-variant mb-2 block">FULL NAME</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant p-4 focus:border-primary text-white" placeholder="JOHN DOE" type="text"/>
+</div>
+<div>
+<label class="font-label text-xs tracking-widest text-on-surface-variant mb-2 block">VEHICLE VIN</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant p-4 focus:border-primary text-white" placeholder="XXXX-XXXX-XXXX" type="text"/>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary-fixed py-6 text-2xl font-black uppercase tracking-tighter shadow-[0_8px_16px_rgba(255,143,112,0.3)] hover:scale-[1.02] transition-transform">
+                            BOOK YOUR SLOT NOW
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-lowest overflow-hidden">
+<div class="container mx-auto px-8">
+<h2 class="text-4xl font-black italic mb-16 border-l-8 border-primary pl-6">THE STREET SPEAKS</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-10 relative">
+<span class="material-symbols-outlined text-primary/20 text-8xl absolute top-4 right-4">format_quote</span>
+<p class="text-xl italic font-body mb-8 relative z-10">"Kinetic Velocity took my Supra from a weekend cruiser to a terrifying monster. 200HP gain with stock internals. Absolutely lethal."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 bg-primary rounded-sm flex items-center justify-center font-black italic">M.S.</div>
+<div>
+<div class="font-black italic">MIKE SANCHEZ</div>
+<div class="text-xs text-primary font-label uppercase">2021 TOYOTA SUPRA MKV</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-10 relative">
+<span class="material-symbols-outlined text-primary/20 text-8xl absolute top-4 right-4">format_quote</span>
+<p class="text-xl italic font-body mb-8 relative z-10">"The only shop I trust with my 1/4 mile builds. They understand the engineering, not just the software. Constant communication."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 bg-primary rounded-sm flex items-center justify-center font-black italic">R.D.</div>
+<div>
+<div class="font-black italic">RAY DALTON</div>
+<div class="text-xs text-primary font-label uppercase">1969 CHEVY CAMARO</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-10 relative">
+<span class="material-symbols-outlined text-primary/20 text-8xl absolute top-4 right-4">format_quote</span>
+<p class="text-xl italic font-body mb-8 relative z-10">"Professional, fast, and aggressive. The throttle response after their Stage 2 tune is night and day. Best money I've spent."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 bg-primary rounded-sm flex items-center justify-center font-black italic">A.L.</div>
+<div>
+<div class="font-black italic">ALEX LEI</div>
+<div class="text-xs text-primary font-label uppercase">2023 BMW M4 CSL</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#000000] border-t-4 border-[#1a1919] flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full gap-8">
+<div>
+<div class="text-xl font-black text-white mb-2 uppercase">KINETIC VELOCITY</div>
+<p class="text-[#ff8f70] font-['Space_Grotesk'] uppercase text-xs tracking-[0.2em] mb-4">ENGINEERING ADRENALINE SINCE 2009</p>
+<p class="text-gray-500 font-['Space_Grotesk'] uppercase text-[10px] tracking-[0.2em]">©2024 KINETIC VELOCITY PERFORMANCE. ALL RIGHTS RESERVED. NO LIMITS.</p>
+</div>
+<div class="flex gap-12 font-['Space_Grotesk'] uppercase text-xs tracking-[0.2em]">
+<div class="flex flex-col gap-3">
+<a class="text-[#ff8f70]" href="#">PRIVACY POLICY</a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#">TERMS OF SERVICE</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-gray-500 hover:text-white transition-colors" href="#">SHIPPING</a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#">REFUNDS</a>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-black transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-black transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+</div>
+</footer>
+</body></html>
