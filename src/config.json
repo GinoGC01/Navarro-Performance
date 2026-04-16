@@ -1,9 +1,10 @@
 {
   "meta": {
-    "brand": "KINETIC VELOCITY",
+    "brand": "NAVARRO PERFORMANCE",
     "defaultLang": "en"
   },
   "images": {
+    "logo": "/logo.webp",
     "hero": "/images/hero.png",
     "computer": "/images/computer.png",
     "blueFix": "/images/blueFix.png",
@@ -40,16 +41,16 @@
   },
   "footer": {
     "en": {
-      "tagline": "ENGINEERING ADRENALINE SINCE 2009",
-      "copyright": "©2024 KINETIC VELOCITY PERFORMANCE. ALL RIGHTS RESERVED. NO LIMITS.",
+      "tagline": "NAVARRO PERFORMANCE // ENGINEERING ADRENALINE",
+      "copyright": "©2024 NAVARRO PERFORMANCE. ALL RIGHTS RESERVED.",
       "privacyPolicy": "PRIVACY POLICY",
       "termsOfService": "TERMS OF SERVICE",
       "shipping": "SHIPPING",
       "refunds": "REFUNDS"
     },
     "es": {
-      "tagline": "INGENIERÍA DE ADRENALINA DESDE 2009",
-      "copyright": "©2024 KINETIC VELOCITY PERFORMANCE. TODOS LOS DERECHOS RESERVADOS. SIN LÍMITES.",
+      "tagline": "NAVARRO PERFORMANCE // INGENIERÍA DE ADRENALINA",
+      "copyright": "©2024 NAVARRO PERFORMANCE. TODOS LOS DERECHOS RESERVADOS.",
       "privacyPolicy": "POLÍTICA DE PRIVACIDAD",
       "termsOfService": "TÉRMINOS DE SERVICIO",
       "shipping": "ENVÍOS",
@@ -62,7 +63,7 @@
       "hero": {
         "badge": "DOMINATE THE ASPHALT",
         "heading": "BUILT FOR <span class=\"text-primary\">SPEED.</span><br/>ENGINEERED FOR <span class=\"text-primary\">POWER.</span>",
-        "description": "We don't just tune cars; we rewrite their DNA. Experience the raw mechanical aggression of Kinetic Velocity.",
+        "description": "We don't just tune cars; we rewrite their DNA. Experience the raw mechanical aggression of Navarro Performance.",
         "ctaPrimary": "GET TUNED NOW",
         "ctaSecondary": "VIEW BUILDS"
       },
@@ -131,7 +132,7 @@
         "heading": "THE STREET SPEAKS",
         "items": [
           {
-            "quote": "\"Kinetic Velocity took my Supra from a weekend cruiser to a terrifying monster. 200HP gain with stock internals. Absolutely lethal.\"",
+            "quote": "\"Navarro Performance took my Supra from a weekend cruiser to a terrifying monster. 200HP gain with stock internals. Absolutely lethal.\"",
             "initials": "M.S.",
             "name": "MIKE SANCHEZ",
             "vehicle": "2021 TOYOTA SUPRA MKV"
@@ -156,7 +157,7 @@
       "hero": {
         "badge": "DOMINÁ EL ASFALTO",
         "heading": "HECHO PARA <span class=\"text-primary\">VELOCIDAD.</span><br/>DISEÑADO PARA <span class=\"text-primary\">POTENCIA.</span>",
-        "description": "No solo tuneamos autos; reescribimos su ADN. Experimentá la agresión mecánica pura de Kinetic Velocity.",
+        "description": "No solo tuneamos autos; reescribimos su ADN. Experimentá la agresión mecánica pura de Navarro Performance.",
         "ctaPrimary": "TUNEÁ AHORA",
         "ctaSecondary": "VER BUILDS"
       },
@@ -225,7 +226,7 @@
         "heading": "LA CALLE HABLA",
         "items": [
           {
-            "quote": "\"Kinetic Velocity transformó mi Supra de un crucero de fin de semana a un monstruo aterrador. 200HP de ganancia con internos stock. Absolutamente letal.\"",
+            "quote": "\"Navarro Performance transformó mi Supra de un crucero de fin de semana a un monstruo aterrador. 200HP de ganancia con internos stock. Absolutamente letal.\"",
             "initials": "M.S.",
             "name": "MIKE SANCHEZ",
             "vehicle": "2021 TOYOTA SUPRA MKV"

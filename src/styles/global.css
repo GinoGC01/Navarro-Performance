@@ -22,25 +22,25 @@ button, a {
   --color-tertiary: #f9f9f9;
   --color-surface-dim: #0e0e0e;
   --color-background: #0e0e0e;
-  --color-primary-fixed: #ff5e00;
+  --color-primary-fixed: #c00000;
   --color-on-primary-container: #480d00;
   --color-on-primary: #5c1300;
   --color-secondary-container: #474746;
-  --color-primary-fixed-dim: #e65500;
+  --color-primary-fixed-dim: #8b0000;
   --color-on-primary-fixed-variant: #581200;
   --color-on-tertiary-fixed-variant: #6c6d6e;
   --color-surface-container-high: #201f1f;
   --color-on-secondary-container: #d2d0cf;
   --color-on-tertiary-fixed: #4f5051;
-  --color-surface-tint: #ff8f70;
+  --color-surface-tint: #ff3333;
   --color-on-tertiary: #5e5f60;
   --color-on-error-container: #ffa8a3;
   --color-tertiary-dim: #ebebeb;
   --color-secondary-dim: #d6d4d3;
-  --color-primary-container: #ff7852;
+  --color-primary-container: #ff4d4d;
   --color-inverse-surface: #fcf8f8;
   --color-surface-container-low: #131313;
-  --color-primary: #ff5e00;
+  --color-primary: #c00000;
   --color-secondary-fixed: #e5e2e1;
   --color-on-surface: #ffffff;
   --color-surface-container-highest: #262626;
@@ -49,9 +49,9 @@ button, a {
   --color-secondary: #e5e2e1;
   --color-on-secondary: #525151;
   --color-on-surface-variant: #adaaaa;
-  --color-inverse-primary: #b22e00;
+  --color-inverse-primary: #b20000;
   --color-on-tertiary-container: #555757;
-  --color-primary-dim: #ff751a;
+  --color-primary-dim: #ff1a1a;
   --color-outline: #777575;
   --color-error-dim: #d7383b;
   --color-surface-variant: #262626;
@@ -82,11 +82,11 @@ button, a {
     background-size: 40px 40px;
   }
   .gradient-button {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #ff8c00 100%);
-    box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #e60000 100%);
+    box-shadow: 0 4px 15px rgba(192, 0, 0, 0.3);
   }
   .gradient-button:hover {
     filter: brightness(1.1);
-    box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(192, 0, 0, 0.4);
   }
 }
